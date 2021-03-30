@@ -16,7 +16,7 @@
 - [x] [ECMAScript 6 Learning](https://github.com/ericdouglas/ES6-Learning)  
 - [x] [JavaScript for impatient programmers](https://exploringjs.com/impatient-js/toc.html)  
 
-多拿几个案例去浏览器测试，加深这些新特性理解；此文主要是对各个特性的学习笔记，以及多个特性的案例。
+多拿几个案例去浏览器测试，加深这些新特性理解；此文主要是对各个特性的学习笔记，以及多个特性的案例。这边只是对新特性的理解，要将这些运用到自己的代码中才能更好的理解这些知识。
 
 **理解ES6新功能，多个使用案例加深新功能的熟悉**  
 
