@@ -26,3 +26,4 @@
 - [x] [第四章 数值新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%9B%9B%E7%AB%A0/%E6%95%B0%E5%80%BC.md)  
 - [x] [第五章 函数的默认参数、箭头函数、展开运算符、尾调用优化](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%BA%94%E7%AB%A0/%E5%87%BD%E6%95%B0.md)  
 - [x] [第六章 数组扩展运算符（Rest+Spread）、类方法、原型方法](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%85%AD%E7%AB%A0/%E6%95%B0%E7%BB%84.md)  
+- [x] [第七章 对象](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%83%E7%AB%A0/%E5%AF%B9%E8%B1%A1.md)  
