@@ -209,3 +209,28 @@ console.log(Symbol.keyFor(s2)); // 'foo'
 console.log(Symbol.keyFor(s3)); // undefined
 console.log(Symbol.keyFor(s4)); // undefined
 ```
+
+> `Symbol.prototype.toString()` 方法返回当前 symbol 对象的字符串表示。  
+> `Symbol.prototype.valueOf()` 方法返回当前 symbol 对象所包含的 symbol 原始值。  
+
+```javascript
+// console.log(Symbol('foo') + 'bar'); // Uncaught TypeError: Cannot convert a Symbol value to a string
+console.log(Symbol('foo').toString() + 'bar'); // Symbol(foo)bar
+console.log(Object(Symbol('foo')).toString() + 'bar'); // Symbol(foo)bar
+Symbol("desc").toString();   // "Symbol(desc)"
+// well-known symbols
+Symbol.iterator.toString();  // "Symbol(Symbol.iterator)
+// global symbols
+Symbol.for("foo").toString() // "Symbol(foo)"
+
+// Object(Symbol("foo")) + "bar";
+// TypeError: can't convert symbol object to primitive
+// 无法隐式的调用 valueOf() 方法
+console.log(Object(Symbol("foo")).valueOf()); // Symbol(foo)
+console.log(Symbol("foo").valueOf()); // Symbol(foo)
+// console.log(Object(Symbol("foo")).valueOf() + "bar");
+// TypeError:  can't convert symbol to string
+// 手动调用 valueOf() 方法，虽然转换成了原始值，但 symbol 原始值不能转换为字符串
+console.log(Object(Symbol("foo")).toString() + "bar");
+// "Symbol(foo)bar"，需要手动调用 toString() 方法才行
+```
