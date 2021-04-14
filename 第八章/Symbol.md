@@ -237,4 +237,26 @@ console.log(Object(Symbol("foo")).toString() + "bar");
 >   
 > `Symbol.hasInstance`用于判断某对象是否为某构造器的实例。因此你可以用它自定义`instanceof`操作符在某个类上的行为。  
 > 
+> `Symbol.isConcatSpreadable`符号等于一个布尔值；用于配置某对象作为`Array.prototype.concat()`方法的参数时是否展开其数组元素。  
 > 
+> `Symbol.iterator`为每一个对象定义了默认的迭代器。该迭代器可以被`for...of`循环使用。  
+> 
+> `Symbol.match`指定了匹配的是正则表达式而不是字符串。  
+> 
+> `Symbol.matchAll`返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。  
+> 
+> `Symbol.replace`这个属性指定了当一个字符串替换所匹配字符串时所调用的方法。  
+> 
+> `Symbol.search` 指定了一个搜索方法，这个方法接受用户输入的正则表达式，返回该正则表达式在字符串中匹配到的下标。  
+> 
+> `Symbol.species`是个函数值属性，其被构造函数用以创建派生对象。  
+> 
+> `Symbol.split`指向 一个正则表达式的索引处分割字符串的方法。
+> 
+> `Symbol.toPrimitive` 是一个内置的 Symbol 值，它是作为对象的函数值属性存在的，当一个对象转换为对应的原始值时，会调用此函数。
+> 
+> `Symbol.toStringTag` 是一个内置 symbol，它通常作为对象的属性键使用，对应的属性值应该为字符串类型，这个字符串用来表示该对象的自定义类型标签，通常只有内置的 `Object.prototype.toString()` 方法会去读取这个标签并把它包含在自己的返回值里。  
+> 
+> `Symbol.unscopables` 指用于指定对象值，其对象自身和继承的从关联对象的 `with` 环境绑定中排除的属性名称。
+
+
