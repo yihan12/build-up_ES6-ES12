@@ -192,8 +192,6 @@ console.dir(Symbol);
 // unscopables: Symbol(Symbol.unscopables)
 ```
 
-#### `Symbol.for()`、`Symbol.keyFor()`、`Symbol.prototype.toString()`、`Symbol.prototype.valueOf()`  
-
 > `Symbol.for()` 接受一个字符串作参数，然后搜索有没有以该参数作为名称的Symbol值。如果有就返回Symbol值，否则返回一个以该字符串为名称的Symbol值  
 > `Symbol.keyFor()` 返回一个已登记的`Symbol`类型值的key  
 
@@ -234,3 +232,9 @@ console.log(Symbol("foo").valueOf()); // Symbol(foo)
 console.log(Object(Symbol("foo")).toString() + "bar");
 // "Symbol(foo)bar"，需要手动调用 toString() 方法才行
 ```
+
+> `Symbol.asyncIterator` 符号指定了一个对象的默认异步迭代器。如果一个对象设置了这个属性，它就是异步可迭代对象，可用于`for await...of`循环。
+>   
+> `Symbol.hasInstance`用于判断某对象是否为某构造器的实例。因此你可以用它自定义`instanceof`操作符在某个类上的行为。  
+> 
+> 
