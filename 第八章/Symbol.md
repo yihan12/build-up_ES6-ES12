@@ -195,7 +195,7 @@ console.dir(Symbol);
 #### `Symbol.for()`、`Symbol.keyFor()`、`Symbol.prototype.toString()`、`Symbol.prototype.valueOf()`  
 
 > `Symbol.for()` 接受一个字符串作参数，然后搜索有没有以该参数作为名称的Symbol值。如果有就返回Symbol值，否则返回一个以该字符串为名称的Symbol值  
-> `Symbol.keyFor()` 返回一个已登记的Symbol类型值的key  
+> `Symbol.keyFor()` 返回一个已登记的`Symbol`类型值的key  
 
 ```javascript
 const s1 = Symbol.for('foo');
