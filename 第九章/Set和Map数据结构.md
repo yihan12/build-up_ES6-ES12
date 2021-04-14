@@ -166,3 +166,31 @@ console.log(d); // Set(2) {2, 3}
 const e = new Set([...a].filter(x=>!b.has(x)));
 console.log(e); // Set(1) {1}
 ```
+
+### `WeakSet`  
+
+语法：  
+```javascript
+new WeakSet([iterable]);
+WeakSet.prototype.add(value);
+WeakSet.prototype.has(value);
+WeakSet.prototype.delete(value);
+```
+
+和`Set`的区别：  
+* 第一，`WeakSet`的成员只能是对象，而不能是其他类型的值；  
+* 第二，`WeakSet`中对象都是弱引用，即垃圾回收机制不考虑`WeakSet`对该对象的引用，也就是说，如果其他对象都不再引用该对象，那么垃圾回收机制会回收该对象所占用的内存，不考虑该对象是否还存在于`WeakSet`之中；  
+* 第三，`WeakSet`不能对其元素进行迭代，并没有那么多使用情形；  
+* 第四，没有size属性。
+
+使用：  
+```javascript
+let set = new WeakSet();
+const class_1 = {}, class_2 = {};
+set.add(class_1);
+set.add(class_2);
+console.log(set) // WeakSet {Object {}, Object {}}
+console.log(set.has(class_1)) // true
+console.log(set.has(class_2)) // true
+```
+
