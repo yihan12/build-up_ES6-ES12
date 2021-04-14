@@ -157,4 +157,55 @@ console.log(getComplement(COLOR_GREEN));
 // console.log(getComplement('21321'));
 ```  
 
+### `Symbol`的方法和属性  
 
+```
+console.dir(Symbol);
+// ƒ Symbol()
+// arguments: (...)
+// asyncIterator: Symbol(Symbol.asyncIterator)
+// caller: (...)
+// for: ƒ for()
+// hasInstance: Symbol(Symbol.hasInstance)
+// isConcatSpreadable: Symbol(Symbol.isConcatSpreadable)
+// iterator: Symbol(Symbol.iterator)
+// keyFor: ƒ keyFor()
+// length: 0
+// match: Symbol(Symbol.match)
+// matchAll: Symbol(Symbol.matchAll)
+// name: "Symbol"
+// prototype: Symbol {constructor: ƒ Symbol()
+//     description: (...)
+//     toString: ƒ toString()
+//     valueOf: ƒ valueOf()
+//     Symbol(Symbol.toPrimitive): ƒ [Symbol.toPrimitive]()
+//     Symbol(Symbol.toStringTag): "Symbol"
+//     get description: ƒ description()
+//     __proto__: Object
+// }
+// replace: Symbol(Symbol.replace)
+// search: Symbol(Symbol.search)
+// species: Symbol(Symbol.species)
+// split: Symbol(Symbol.split)
+// toPrimitive: Symbol(Symbol.toPrimitive)
+// toStringTag: Symbol(Symbol.toStringTag)
+// unscopables: Symbol(Symbol.unscopables)
+```
+
+#### `Symbol.for()`、`Symbol.keyFor()`、`Symbol.prototype.toString()`、`Symbol.prototype.valueOf()`  
+
+> `Symbol.for()` 接受一个字符串作参数，然后搜索有没有以该参数作为名称的Symbol值。如果有就返回Symbol值，否则返回一个以该字符串为名称的Symbol值  
+> `Symbol.keyFor()` 返回一个已登记的Symbol类型值的key  
+
+```javascript
+const s1 = Symbol.for('foo');
+const s2 = Symbol.for('foo');
+const s3 = Symbol('foo');
+const s4 = Symbol('foo');
+console.log(s1 === s2); // true
+console.log(s3 === s4); // false
+console.log(Symbol.keyFor(s1)); // 'foo'
+console.log(Symbol.keyFor(s2)); // 'foo'
+console.log(Symbol.keyFor(s3)); // undefined
+console.log(Symbol.keyFor(s4)); // undefined
+```
