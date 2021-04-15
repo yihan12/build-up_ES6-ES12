@@ -194,3 +194,4 @@ console.log(set.has(class_1)) // true
 console.log(set.has(class_2)) // true
 ```
 
+### `Map`
