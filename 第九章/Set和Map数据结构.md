@@ -424,3 +424,72 @@ console.log(map.size); // 0
 > `values()`:返回键值；  
 > `entries()`:返回所有成员；  
 > `forEach()`:返回Map所有成员；  
+```javascript
+const map = new Map()
+.set(1,'one')
+.set(2,'two')
+.set(3,'three')
+
+for (const key of map.keys()) {
+  console.log(key);
+  // 1
+  // 2
+  // 3
+}
+
+for (const value of map.values()) {
+  console.log(value);
+  // 'one'
+  // 'two'
+  // 'three'
+}
+
+for (const [key,value] of map.entries()) {
+  console.log(key,value);
+  // 1 'one'
+  // 2 'two'
+  // 3 'three'
+}
+
+for (const [key,value] of map) {
+  console.log(key,value);
+  // 1 'one'
+  // 2 'two'
+  // 3 'three'
+}
+
+console.log([...map.keys()]); // [1,2,3]
+console.log([...map.values()]); // ['one','two','three']
+console.log([...map.entries()]); // [[1,'one'],[2,'two'],[3,'three']]
+console.log([...map]); // [[1,'one'],[2,'two'],[3,'three']]
+
+map.forEach((value,key,map)=>{
+  console.log(key,value); 
+  // 1 'one'
+  // 2 'two'
+  // 3 'three'
+})
+
+// forEach方法还能接收第二个参数，用于绑定this
+const reporter = {
+  report:(key,value)=>{
+    console.log(key,value);
+    // 1 'one'
+    // 2 'two'
+    // 3 'three'
+  }
+}
+map.forEach(function(value,key,map){
+  this.report(key,value)
+},reporter)
+
+const map1 = new Map(
+  [...map].filter(([k,v])=>k<3)
+)
+console.log(map1); // Map(2) {1 => "one", 2 => "two"}
+
+const map2 = new Map(
+  [...map].map(([k,v])=>[k*2,"_"+v])
+)
+console.log(map2); // Map(3) {2 => "_one", 4 => "_two", 6 => "_three"}
+```
