@@ -199,4 +199,4 @@ console.log(set.has(class_2)) // true
 > JavaScript的对象本质上是键值对的集合（Hash结构）,但是只能用字符串作为键；  
 > `Map`类似于对象，也是键值对集合，各种类型的值（包括对象）都能当做键；  
 > +0,-0`Map`视为一个键；  
-> `NaN`,`NaN``Map`视为一个键；  
+> `NaN`,`NaN` `Map`视为一个键；  
