@@ -493,3 +493,7 @@ const map2 = new Map(
 )
 console.log(map2); // Map(3) {2 => "_one", 4 => "_two", 6 => "_three"}
 ```
+
+#### 与其他数据结构互相转换  
+
+> 
