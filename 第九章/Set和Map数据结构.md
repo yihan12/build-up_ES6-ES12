@@ -334,3 +334,93 @@ const k6 = 1;
 mapSame.set(k5,456).set(k6,789);
 console.log(mapSame.get(k5),mapSame.get(k6)); // 789 789
 ```
+
+#### `Map`的属性、操作方法、遍历方法  
+
+> `size`：返回Map结构的成员总数；
+> `set(key,value)`:设置key所对应的键值，然后返回整个Map结构；如果key已经优质，则键值会被更新，否则就新生成改键；
+> `get(key)`:读取key所对应的键值，如果找不到key，则返回undefined；
+> `has(key)`:返回一个布尔值，表示某个键是否在Map数据结构中；
+> `delete(key)`:删除某个键，返回true，如果失败，则返回false；
+> `clear()`: 清空所有成员，没有返回值；  
+```javascript
+const map = new Map([
+  [false,'no'],
+  [true,'yes'],
+  [undefined,1],
+  [null,2],
+  [NaN,3],
+  [+0,4],
+  [{},5],
+  [[],6]
+])
+console.log(map);
+// Map(8) 
+//   [[Entries]]
+//   0: {false => "no"}
+//   1: {true => "yes"}
+//   2: {undefined => 1}
+//   3: {null => 2}
+//   4: {NaN => 3}
+//   5: {0 => 4}
+//   6: {Object => 5}
+//   7: {Array(0) => 6}
+//   size: 8
+//   __proto__: Map
+console.log(map.size); // 8
+map.set(NaN,33).set(-0, 44).set({},55).set([],66);
+console.log(map);
+// Map(10) 
+//   [[Entries]]
+//   0: {false => "no"}
+//   1: {true => "yes"}
+//   2: {undefined => 1}
+//   3: {null => 2}
+//   4: {NaN => 33}
+//   5: {0 => 44}
+//   6: {Object => 5}
+//   7: {Array(0) => 6}
+//   8: {Object => 55}
+//   9: {Array(0) => 66}
+//   size: 10
+//   __proto__: Map
+console.log(map.size); //10
+console.log(map.get(false)); // 'no'
+console.log(map.get(true)); // 'yes'
+console.log(map.get(null)); // 2
+console.log(map.get(undefined)); // 1
+console.log(map.get(0)); // 44
+console.log(map.get({})); // undefined
+console.log(map.get([])); // undefined
+console.log(map.get('abcdef')); // undefined
+
+console.log(map.has(false)); //true
+console.log(map.has(true)); //true
+console.log(map.has(0)); //true
+console.log(map.has(NaN)); //true
+console.log(map.has({})); //false
+console.log(map.has([])); //false
+console.log(map.has('abcdef')); //false
+
+map.set(undefined,11).set(null,22).set(true,'yesyes').set(false,'nono');
+console.log(map.get(undefined)); // true
+console.log(map.get(null)); // 22
+console.log(map.get(true)); // 'yesyes'
+console.log(map.get(false)); // 'nono'
+map.delete(undefined);
+map.delete(null);
+map.delete(true);
+console.log(map.get(undefined)); // undefined
+console.log(map.get(null)); // undefined
+console.log(map.get(true)); // undefined
+console.log(map.get(false)); // 'nono'
+
+console.log(map.size); // 7
+map.clear(); 
+console.log(map.size); // 0
+```  
+
+> `keys()`:返回键名；
+> `values()`:返回键值；
+> `entries()`:返回所有成员；
+> `forEach()`:返回Map所有成员；
