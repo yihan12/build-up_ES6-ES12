@@ -337,12 +337,12 @@ console.log(mapSame.get(k5),mapSame.get(k6)); // 789 789
 
 #### `Map`的属性、操作方法、遍历方法  
 
-> `size`：返回Map结构的成员总数；
-> `set(key,value)`:设置key所对应的键值，然后返回整个Map结构；如果key已经优质，则键值会被更新，否则就新生成改键；
-> `get(key)`:读取key所对应的键值，如果找不到key，则返回undefined；
-> `has(key)`:返回一个布尔值，表示某个键是否在Map数据结构中；
-> `delete(key)`:删除某个键，返回true，如果失败，则返回false；
-> `clear()`: 清空所有成员，没有返回值；  
+> `size`：返回Map结构的成员总数；  
+> `set(key,value)`:设置key所对应的键值，然后返回整个Map结构；如果key已经优质，则键值会被更新，否则就新生成改键；  
+> `get(key)`:读取key所对应的键值，如果找不到key，则返回undefined；  
+> `has(key)`:返回一个布尔值，表示某个键是否在Map数据结构中；  
+> `delete(key)`:删除某个键，返回true，如果失败，则返回false；  
+> `clear()`: 清空所有成员，没有返回值；    
 ```javascript
 const map = new Map([
   [false,'no'],
@@ -420,7 +420,7 @@ map.clear();
 console.log(map.size); // 0
 ```  
 
-> `keys()`:返回键名；
-> `values()`:返回键值；
-> `entries()`:返回所有成员；
-> `forEach()`:返回Map所有成员；
+> `keys()`:返回键名；  
+> `values()`:返回键值；  
+> `entries()`:返回所有成员；  
+> `forEach()`:返回Map所有成员；  
