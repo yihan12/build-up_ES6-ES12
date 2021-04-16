@@ -200,3 +200,137 @@ console.log(set.has(class_2)) // true
 > `Map`类似于对象，也是键值对集合，各种类型的值（包括对象）都能当做键；  
 > +0,-0`Map`视为一个键；  
 > `NaN`,`NaN` `Map`视为一个键；  
+
+```javascript
+const m = new Map();
+const o = {p:'hello world'};
+m.set(o, 'content');
+console.log(m.size); // 1
+console.dir(m); // Map(1)
+console.log(m.get(o)); // 'content'
+console.log(m.has(o)); // true
+m.delete(o)
+console.log(m.has(o)); // false
+```  
+
+#### 创建`Map`  
+
+```javascript
+const mapOne = new Map([
+  [1,'one'],
+  [2,'two'],
+  [3,'three']
+]);
+const mapTwo = new Map()
+.set(1,'one')
+.set(2,'two')
+.set(3,'three');
+console.log(mapOne,mapTwo); // Map(3) {1 => "one", 2 => "two", 3 => "three"} Map(3) {1 => "one", 2 => "two", 3 => "three"}
+```  
+
+#### `Map` 的基础用法
+
+```javascript
+const map = new Map([
+  ['name','张三'],
+  ['title','author']
+]);
+console.log(map); // Map(2) {"name" => "张三", "title" => "author"}
+console.log(map.size); // 2
+console.log(map.has('name')); // true
+console.log(map.get('name')); // '张三'
+console.log(map.has('title')); // true
+console.log(map.get('title')); // 'author'
+
+const items = [['name','张三'],['title','author']];
+const mapItems = new Map();
+items.forEach(
+  ([key,value]) => mapItems.set(key,value)
+)
+console.log(mapItems); // Map(2) {"name" => "张三", "title" => "author"}
+```
+
+#### 各类Map的键  
+
+* NaN  
+```javascript
+console.log(NaN === NaN); // false
+console.log(Object.is(NaN, NaN)); // true
+const mapNaN = new Map().set(NaN,'NaN123');
+console.log(mapNaN.get(NaN)); // 'NaN123'
+```  
+
+* +0,-0  
+```javascript
+console.log(+0 === -0); // true
+console.log(Object.is(+0, -0)); // true
+const map00 = new Map().set(+0,'000');
+console.log(map00.get(-0)); // '000'
+```  
+
+* {}  
+```javascript
+console.log(new Map().set({},1).set({},2).size); // 2
+```
+
+* []  
+```javascript
+console.log(new Map().set([],1).set([],2).size); // 2
+```  
+
+* true,false,null,undefined,'true'  
+```javascript
+const mapAll = new Map();
+mapAll.set(true,true).set('true','true').set(undefined,1).set(null,2);
+console.log(mapAll.get(true),mapAll.get('true'),mapAll.get(undefined),mapAll.get(null)); // true 'true' 1 2
+```
+
+**注意：不存在的属性键返回undefined**  
+```javascript
+console.log(new Map().get('abcsdff')); // undefined
+```  
+
+**注意：不仅仅是数组，任何具有Iterator接口且每个成员都是一个双数组的数据结构都可以当作Map构造函数的参数。**  
+```javascript
+const set = new Set([['foo',1],['bar',2]]);
+const m1 = new Map(set);
+console.log(m1.get('foo')); // 1
+```  
+
+**注意：对同一个键赋值，后面的值会覆盖前面的值**  
+```javascript
+ const mapNew = new Map();
+mapNew.set(1, 'aaa').set(1, 'bbb');
+console.log(mapNew.get(1)); // 'bbb'
+console.log(mapNew.get('11dasda')); // undefined
+```  
+
+**注意：只有对同一对象的引用，Map结构才将其视为同一个键。**  
+```javascript
+const mapA = new Map()
+mapA.set(['a'], 555);
+console.log(mapA.get(['a'])); // undefined
+
+let aa = ['a'];
+mapA.set(aa, 555);
+console.log(mapA.get(aa)); // 555
+```  
+
+**注意：同样的值的两个实例在Map结构中被视为两个键，简单类型值除外（数字，字符串，布尔值）**  
+```javascript
+const mapSame = new Map();
+const k1 = ['a'];
+const k2 = ['a'];
+mapSame.set(k1,111).set(k2,222);
+console.log(mapSame.get(k1),mapSame.get(k2)); // 111 222
+
+const k3 = {a:1};
+const k4 = {a:1};
+mapSame.set(k3,123).set(k4,234);
+console.log(mapSame.get(k3),mapSame.get(k4)); // 123 234
+
+const k5 = 1;
+const k6 = 1;
+mapSame.set(k5,456).set(k6,789);
+console.log(mapSame.get(k5),mapSame.get(k6)); // 789 789
+```
