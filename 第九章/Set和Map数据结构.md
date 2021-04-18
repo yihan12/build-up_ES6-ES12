@@ -578,3 +578,10 @@ function ArrJSONtoMap(arrJson){
 }
 console.log(ArrJSONtoMap('[[true,7],[{"foo":3},["abc"]]]')); // Map(2) {true => 7, {…} => Array(1)}
 ```
+
+### `WeakMap`  
+
+和Map的区别：  
+> 没有遍历操作；  
+> 无法清空，不支持clear方法；  
+> 
