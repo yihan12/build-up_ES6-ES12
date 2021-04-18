@@ -533,4 +533,48 @@ console.log(ObjtoMap(endObj)); // Map(2) {"yes" => true, "no" => false}
 
 * `Map`和JSON互转(=>JSON:`Map`键名都是字符串，可以转为对象JSON；还有非字符串，可以转为数组JSON。=>Map:对象JSON；数组JSON。)  
 ```javascript
+// map转对象JSON
+function MaptoObjJSON(strMap){
+  return  JSON.stringify(MaptoObj(strMap))
+}
+function MaptoObj(strMap){
+  let obj = Object.create(null);
+  for (const [k,v] of strMap) {
+    obj[k] = v;
+  }
+  return obj;
+}
+const myMap = new Map()
+.set('yes', true)
+.set('no', false);
+console.log(MaptoObjJSON(myMap)); // '{"yes":true,"no":false}'
+
+// map转数组JSON
+function MaptoArrJSON(strMap){
+  return JSON.stringify([...strMap])
+}
+const myMap1 = new Map([
+  [true, 7],
+  [{foo:3},['abc']]
+])
+console.log(MaptoArrJSON(myMap1)); // '[[true,7],[{"foo":3},["abc"]]]'
+
+// 对象JSON转Map
+function strJSONtoMap(strJson){
+  return ObjtoMap(JSON.parse(strJson))
+}
+function ObjtoMap(obj){
+  let strMap = new Map();
+  for (const k of Object.keys(obj)) {
+    strMap.set(k,obj[k])
+  }
+  return strMap
+}
+console.log(strJSONtoMap('{"yes":true,"no":false}')); // Map(2) {"yes" => true, "no" => false}
+
+// 数组JSON转Map
+function ArrJSONtoMap(arrJson){
+  return new Map(JSON.parse(arrJson))
+}
+console.log(ArrJSONtoMap('[[true,7],[{"foo":3},["abc"]]]')); // Map(2) {true => 7, {…} => Array(1)}
 ```
