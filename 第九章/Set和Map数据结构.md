@@ -496,4 +496,41 @@ console.log(map2); // Map(3) {2 => "_one", 4 => "_two", 6 => "_three"}
 
 #### 与其他数据结构互相转换  
 
+* `Map`和数组互转  
+```javascript
+const myMap = new Map()
+.set(true,7)
+.set({foo:3},['abc']);
+let arrMap = [...myMap]
+console.log(arrMap); // [[true,7],[{foo:3},['abc']]]
+console.log(new Map(arrMap)); // Map(2) {true => 7, {foo:3} => Array(1)}
+```
 
+* `Map`和对象互转(=>obj需要`Map`的所有键都是字符串)  
+```javascript
+function MaptoObj(strMap){
+  let obj = Object.create(null);
+  for (const [k,v] of strMap) {
+    obj[k] = v;
+  }
+  return obj;
+}
+function ObjtoMap(obj){
+  let strMap = new Map();
+  for (const k of Object.keys(obj)) {
+    strMap.set(k,obj[k])
+  }
+  return strMap
+}
+const strMap = new Map([
+  ['yes',true],
+  ['no',false]
+])
+const endObj = MaptoObj(strMap)
+console.log(endObj); // {yes: true, no: false}
+console.log(ObjtoMap(endObj)); // Map(2) {"yes" => true, "no" => false}
+```
+
+* `Map`和JSON互转(=>JSON:`Map`键名都是字符串，可以转为对象JSON；还有非字符串，可以转为数组JSON。=>Map:对象JSON；数组JSON。)  
+```javascript
+```
