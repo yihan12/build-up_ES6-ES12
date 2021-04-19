@@ -584,4 +584,13 @@ console.log(ArrJSONtoMap('[[true,7],[{"foo":3},["abc"]]]')); // Map(2) {true =>
 和Map的区别：  
 > 没有遍历操作；  
 > 无法清空，不支持clear方法；  
-> 
+> key是对象，值可以是任何值；  
+
+```javascript
+const wm = new WeakMap()
+
+wm.set('abc', 123); // TypeError
+wm.set({}, 123); // OK
+```  
+
+
