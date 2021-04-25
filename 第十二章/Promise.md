@@ -18,5 +18,27 @@
 
 ### 基本用法
 
+就比如如下式的执行顺序，依次打印出的结果：  
 ```javascript
+function timeout(ms){
+  return new  Promise((resolve, reject)=>{
+    setTimeout(resolve, ms, 'done')
+  })
+}
+timeout(100).then(value=>{
+  console.log(value);
+})
+
+let promise = new Promise(function(resolve, reject){
+  console.log('Promise');
+  resolve();
+})
+promise.then(function(){
+  console.log('Resolved.');
+})
+console.log('hi');
+// Promise
+// hi 
+// Resolved
+// done
 ```
