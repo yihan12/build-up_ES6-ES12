@@ -31,8 +31,9 @@ timeout(100).then(value=>{
 
 // Promise新建后就会立即执行
 let promise = new Promise(function(resolve, reject){
-  console.log('Promise');
+  console.log('Promise1');
   resolve();
+  console.log('Promise2');
 })
 promise.then(function(){
   console.log('Resolved.');
@@ -42,4 +43,7 @@ console.log('hi');
 // hi 
 // Resolved
 // done
-```
+```  
+从上式中不难看出，**Promise新建后就会立即执行；Promise构造函数是同步的，promise.then中的函数是一步执行的。**  
+
+
