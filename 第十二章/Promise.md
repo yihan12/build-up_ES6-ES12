@@ -60,4 +60,17 @@ console.log('hi');
 
 #### `Promise.prototype.catch()`  
 
-> 和then的第二个参数一样，用来指定`Rejected`的回调
+> 和then的第二个参数一样，用来指定`Rejected`的回调。  
+> 在执行`Resolved`状态的回调函数时，如果抛出异常了（代码出错了），那么并不会报错卡死js，而是会进到catch方法中。  
+
+```javascript
+let p = new Promise(function(resolve, reject){
+  resolve(111);
+})
+p.then(data=>{
+  console.log('resolved',data); // resolved 111
+  console.log(sData); // 
+}).catch(err=>{
+  console.log('rejected',err); // rejected ReferenceError: sData is not defined
+})
+```
