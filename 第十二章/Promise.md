@@ -57,3 +57,7 @@ console.log('hi');
 
 > 接受两个参数：1.第一个参数是`Resolved`状态的回调函数；2.第二个参数（可选）是`Rejected`状态的回调函数。  
 > 一般来说，不要在then方法中定义`Rejected`状态的回调函数（即then的第二个参数），而应总是使用catch方法。
+
+#### `Promise.prototype.catch()`  
+
+> 和then的第二个参数一样，用来指定`Rejected`的回调
