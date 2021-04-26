@@ -53,4 +53,7 @@ console.log('hi');
 ```  
 从上式中不难看出，**Promise新建后就会立即执行；Promise构造函数是同步的，promise.then中的函数是一步执行的。**  
 
+#### `Promise.prototype.then()`  
 
+> 接受两个参数：1.第一个参数是`Resolved`状态的回调函数；2.第二个参数（可选）是`Rejected`状态的回调函数。  
+> 一般来说，不要在then方法中定义`Rejected`状态的回调函数（即then的第二个参数），而应总是使用catch方法。
