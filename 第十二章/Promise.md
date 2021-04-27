@@ -268,3 +268,15 @@ delay(5000).then(function(){
   console.log('5 seconds have passed!');
 })
 ```
+
+* Promise超时  
+```javascript
+function timeout(ms,promise){
+  return new Promise(function(resolve,reject){
+    promise.then(resolve);
+    setTimeout(function(){
+      reject(new Error(`Timeout after ${ms} ms`));
+    },ms)
+  })
+}
+```
