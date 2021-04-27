@@ -121,3 +121,16 @@ Promise.resolve('foo');
 // 等价于
 new Promise(resolve => resolve('foo'))
 ```
+
+#### `Promise.reject()`  
+
+> 也会返回一个新的`Promise`实例，状态为Rejected。
+
+```javascript
+const p = Promise.reject('出错了');
+// 等同于
+const p1 = new Promise((resolve,reject)=>reject('出错了'));
+p1.then(null,function(s){
+  console.log(s);
+})
+```
