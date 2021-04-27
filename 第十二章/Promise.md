@@ -102,4 +102,14 @@ let p = Promise.all([p1,p2,p3]);
 > 只有p1,p2,p3的状态都变成Fulfilled，p的状态才会变成Fulfilled，此时p1,p2,p3的返回值组成一个数组，传递给p的回调函数。  
 > 只要p1,p2,p3中有一个被Rejected，p的状态就变成Rejected，此时第一个被Rejected的实例的返回值会传递给P的回调函数。  
 
+#### `Promise.race()`  
+
+> 多个`Promise`实例包装成一个新的实例。  
+
+```javascript
+let p = Promise.race([p1,p2,p3]);
+```
+
+> 只要p1,p2,p3中有一个实例率先改变状态，p的状态就跟着改变。那个率先改变的Promise实例的返回值就传递给p的回调函数。  
+
 
