@@ -1,5 +1,8 @@
 # 预览  
 
+```javascript
+```
+
 ### 含义： 
 
 > `Promise`是一部编程的一种解决方案————回调函数和事件————更合理且更强大。  
@@ -78,5 +81,12 @@ p.then(data=>{
 #### `Promise.all()`  
 
 > 多个`Promise`实例包装成一个新的`Promise`实例。  
+
+```javascript
+let p = Promise.all([p1,p2,p3]);
+```
+
+> 只有p1,p2,p3的状态都变成Fulfilled，p的状态才会变成Fulfilled，此时p1,p2,p3的返回值组成一个数组，传递给p的回调函数。  
+> 只要p1,p2,p3中有一个被Rejected，p的状态就变成Rejected，此时第一个被Rejected的实例的返回值会传递给P的回调函数。  
 
 
