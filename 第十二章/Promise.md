@@ -74,3 +74,9 @@ p.then(data=>{
   console.log('rejected',err); // rejected ReferenceError: sData is not defined
 })
 ```
+
+#### `Promise.all()`  
+
+> 多个`Promise`实例包装成一个新的`Promise`实例。  
+
+
