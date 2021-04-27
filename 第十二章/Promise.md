@@ -112,4 +112,12 @@ let p = Promise.race([p1,p2,p3]);
 
 > 只要p1,p2,p3中有一个实例率先改变状态，p的状态就跟着改变。那个率先改变的Promise实例的返回值就传递给p的回调函数。  
 
+#### `Promise.resolve()`  
 
+> 将现有对象转为`Promise`对象。  
+
+```javascript
+Promise.resolve('foo');
+// 等价于
+new Promise(resolve => resolve('foo'))
+```
