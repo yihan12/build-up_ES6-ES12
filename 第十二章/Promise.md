@@ -224,3 +224,35 @@ readFilePromisified(process.argv[2])
   console.log(error);
 })
 ```
+
+* Promise化`XMLHttpRequest`  
+```javascript
+function httpGet(url){
+  return new Promise(function(resolve,reject){
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+      if(this.status === 200){
+        //success
+        resolve(this.response);
+      }else{
+        reject(new Error(this.statusText))
+      }
+    }
+    request.onerror = function(){
+      reject(new Error(`XMLHttpRequest Error:${this.statusText}`))
+    }
+    request.open('GET', url);
+    request.send();
+  })
+}
+
+httpGet('http://example.com/file.text')
+.then(
+  function(value){
+    console.log(value);
+  },
+  function(reason){
+    console.error('error:'+reason);
+  }
+)
+```
