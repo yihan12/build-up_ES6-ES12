@@ -1,6 +1,19 @@
 # 预览  
 
 ```javascript
+function asyncFunc(){
+  return new Promise(
+    function(resolve,reject){
+      let value,error;
+      resolve(value); // success
+      // ...
+      reject(error); // failure
+    }
+  )
+}
+asyncFunc()
+.then(value => { /*success*/ })
+.catch(error => { /*failure*/ })
 ```
 
 ### 含义： 
