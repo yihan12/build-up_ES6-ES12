@@ -134,3 +134,52 @@ p1.then(null,function(s){
   console.log(s);
 })
 ```
+
+#### `done()`  
+
+> 总是处于回调链的尾端，保证抛出任何可能出现的错误。  
+
+用法：  
+```javascript
+asyncFunc()
+.then(f1)
+.catch(r1)
+.then(f2)
+.done()
+```
+
+实现代码：  
+```javascript
+Promise.prototype.done=function(onFulfilled,onRejected){
+  this.then(onFulfilled,onRejected)
+  .catch(function(reason){
+    // 抛出一个全局错误
+    setTimeout(()=>{throw reson},0)
+  })
+}
+```
+
+#### `finally()`  
+
+> 用于指定不管`Promise`对象最后状态如何都会执行的操作。  
+
+用法：  
+```javascript
+server.listen(0)
+.then(function(){
+  // run test
+})
+.finally(server.stop)
+```
+
+实现：  
+```javascript
+Promise.prototype.finally = function(callback){
+  let P = this.constructor;
+  return this.then(
+    value => P.resolve(callback()).then(()=>value),
+    reason => P.resolve(callback()).then(()=>{throw reason})
+  )
+}
+```
+
