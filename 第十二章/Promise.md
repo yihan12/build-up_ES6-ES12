@@ -256,3 +256,15 @@ httpGet('http://example.com/file.text')
   }
 )
 ```
+
+* 延迟操作  
+```javascript
+function delay(ms){
+  return new Promise(function(resolve, reject){
+    setTimeout(resolve,ms);
+  })
+}
+delay(5000).then(function(){
+  console.log('5 seconds have passed!');
+})
+```
