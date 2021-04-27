@@ -16,7 +16,7 @@ asyncFunc()
 .catch(error => { /*failure*/ })
 ```
 
-### 含义： 
+### 含义  
 
 > `Promise`是一部编程的一种解决方案————回调函数和事件————更合理且更强大。  
 > `Promise`对象是一个构造函数，用来生产`Promise`实例。  
@@ -39,7 +39,7 @@ asyncFunc()
 > `resolve`函数: 将`Promise`对象的状态从未完成变为成功（即从`Pending`变为`Resolved`），在异步成功时调用，并将异步成功的结果作为参数传递出去；  
 > `reject`函数：将`Promise`对象的状态从未完成变为失败（即从`Pending`变为`Rejected`），在异步操作失败时调用，并将异步操作失败报出的错误作为参数传递出去。
 
-### 基本用法
+### 基本用法  
 
 就比如如下式的执行顺序，依次打印出的结果：  
 ```javascript
@@ -183,3 +183,8 @@ Promise.prototype.finally = function(callback){
 }
 ```
 
+### 应用  
+
+* 加载图片  
+```javascript
+```
