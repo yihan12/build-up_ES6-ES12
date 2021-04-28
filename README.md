@@ -32,3 +32,4 @@
 - [x] [第十章 Proxy](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%8D%81%E7%AB%A0/Proxy.md)    
 - [x] [第十一章 Reflect](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/Reflect.md)    
 - [x] [第十二章 Promise](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/Promise.md)    
+- [x] [第十三章 async函数](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0/async%E5%87%BD%E6%95%B0.md)   
