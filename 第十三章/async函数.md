@@ -88,3 +88,20 @@ asyncPrint('hello', 3000);
 ```javascript
 async function foo(){}
 ```
+* 函数表达式  
+```javascript
+const foo = async function(){};
+```
+* 对象的方法  
+```javascript
+let obj = { async foo() {}};
+obj.foo().then(...)
+```
+* 箭头函数  
+```javascript
+const foo = async ()=>{};
+```
+* Class方法  
+```javascript
+
+```
