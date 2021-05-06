@@ -32,3 +32,26 @@ asyncCall();
 // 'calling'
 // 'resolved'
 ```
+
+`async`函数返回一个Promise对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。  
+```javascript
+async function getStockPriceByName(name){
+  const symbol = await getStockSymbol(name);
+  const stockPrice = await getStockPrice(symbol);
+  return stockPrice;
+}
+function getStockSymbol(e) {
+  console.log(e, 'getStockSymbol');
+  return e
+}
+function getStockPrice(e) {
+  console.log(e, 'getStockPrice');
+  return e
+}
+getStockPriceByName('goog').then(function(result){
+  console.log(result, 'getStockPriceByName');
+})
+// 'goog' 'getStockSymbol'
+// 'goog' 'getStockPrice'
+// 'goog' 'getStockPriceByName'
+```
