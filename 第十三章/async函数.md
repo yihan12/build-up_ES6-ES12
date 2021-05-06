@@ -55,3 +55,18 @@ getStockPriceByName('goog').then(function(result){
 // 'goog' 'getStockPrice'
 // 'goog' 'getStockPriceByName'
 ```
+
+指定多少毫秒后输出一个值  
+```javascript
+function timeout(ms){
+  return new Promise(resolve=>{
+    setTimeout(resolve, ms);
+  })
+}
+async function asyncPrint(value, ms){
+  await timeout(ms);
+  console.log(value);
+}
+asyncPrint('hello', 3000);
+// 'hello'
+```
