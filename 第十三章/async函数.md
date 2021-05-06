@@ -82,3 +82,9 @@ async function asyncPrint(value, ms){
 }
 asyncPrint('hello', 3000);
 ```
+
+`async`函数的多种形式：  
+* 函数声明   
+```javascript
+async function foo(){}
+```
