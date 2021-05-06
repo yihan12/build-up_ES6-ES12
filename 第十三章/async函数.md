@@ -10,7 +10,25 @@ async对Generator函数的改进：
 * 3、更广的适用性；  
 * 4、返回值是Promise。  
 
-### 语法  
+### 使用  
 
 ```javascript
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
+// 'calling'
+// 'resolved'
 ```
