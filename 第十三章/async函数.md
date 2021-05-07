@@ -118,3 +118,26 @@ storage.getAvatar('jake').then(
   //...
 );
 ```
+
+返回promise对象  
+```javascript
+async function f(){
+  return 'hello'
+}
+f().then(v=>console.log(v));
+// 'hello'
+
+// async函数抛出错误会导致返回的Promise对象变为reject状态，抛出的对象会被catch的回调函数接收到
+async function f1(){
+  throw new Error('出错了')
+}
+f1().then(v=>console.log(v))
+.catch(e=>console.log(e));
+// Error: 出错了
+
+// 等同于
+async function f2(){
+  throw new Error('出错了')
+}
+f2().then(v=>console.log(v),e=>console.log(e))
+```
