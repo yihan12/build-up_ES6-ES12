@@ -203,7 +203,7 @@ f()
 ```
 
 错误的处理：  
-```javacript
+```javascript
 async function f(){
   await new Promise(function(resolve,reject){
     throw new Error('出错了')
