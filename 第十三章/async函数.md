@@ -201,3 +201,63 @@ f()
 // '出错了'
 // '123'
 ```
+
+错误的处理：  
+```javacript
+async function f(){
+  await new Promise(function(resolve,reject){
+    throw new Error('出错了')
+  })
+}
+f()
+.then(v=>console.log(v))
+.catch(e=>console.log(e))
+// Error: 出错了
+
+// try...catch 防止出错
+async function f1(){
+  try{
+    await new Promise(function(resolve,reject){
+      throw new Error('出错了！')
+    })
+  }catch(e){
+
+  }
+  return await('hello')
+}
+f1()
+.then(v=>console.log(v))
+.catch(e=>console.log(e))
+// 'hello'
+
+// try...catch处理多个await命令
+function F1(e){
+  return new Promise(function(resolve,reject){
+    resolve(e)
+  })
+}
+function F2(e){
+  return new Promise(function(resolve,reject){
+    resolve(e)
+  })
+}
+function F3(e){
+  return new Promise(function(resolve,reject){
+    resolve(e)
+  })
+}
+async function f3(){
+  try{
+    const val1 = await F1('F1');
+    const val2 = await F2(val1);
+    const val3 = await F3(val1+val2);
+    console.log('val3:'+val3); // 'val3:F1F1'
+  }catch(e){
+    console.log(e);
+  }
+  return await('end')
+}
+f3()
+.then(v=>console.log(v)) // 'end'
+.catch(e=>console.log(e))
+```
