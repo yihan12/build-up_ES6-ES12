@@ -171,3 +171,33 @@ f()
 .then(v=>console.log(v))
 .catch(e=>{console.log(e)}) // '出错了'
 ```
+
+解决`await`语句后面的Promise变为reject，整个`async`函数中断执行：  
+* 第一种  
+```javascript
+async function f(){
+  try{
+    await Promise.reject('出错了')
+  }catch(e){
+    console.log(e);
+  }
+  return await Promise.resolve('hello')
+}
+f()
+.then(v=>console.log(v)) 
+// '出错了'
+// 'hello'
+```
+
+* 第二种  
+```javascript
+async function f(){
+  await Promise.reject('出错了')
+  .catch(e=>console.log(e))
+  return await Promise.resolve('123')
+}
+f()
+.then(v=>console.log(v))
+// '出错了'
+// '123'
+```
