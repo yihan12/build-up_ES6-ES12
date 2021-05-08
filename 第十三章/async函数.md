@@ -261,3 +261,43 @@ f3()
 .then(v=>console.log(v)) // 'end'
 .catch(e=>console.log(e))
 ```
+
+### 按顺序完成一部操作  
+
+```javascript
+// Promise的写法
+function logInOrder(urls){
+  // 远程读取所有的url
+  const textPromises = urls.map(url=>{
+    return fetch(url).then(response=>response.text())
+  })
+
+  // 按次序输出
+  textPromises.reduce((chain,textPromise)=>{
+    return chain.then(()=>textPromise)
+      .then(text=>console.log(text))
+  }, Promise.resolve())
+}
+
+// async的写法
+async function logInorder2(urls){
+  for (const url of urls){
+    const response = await fetch(url);
+    console.log(await reponse.text());
+  }
+}
+
+// 上面需要等待一个结果后才能执行后续
+async function logInOrder3(urls){
+  // 并发读取远程URL
+  const textPromises = urls.map(async url=>{
+    const response = await fetch(url)
+    return response.text()
+  })
+
+  // 按次序输出
+  for(const textPromise of textPromises){
+    console.log(await textPromise);
+  }
+}
+```
