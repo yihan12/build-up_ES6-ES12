@@ -161,3 +161,13 @@ async function f(){
 }
 f().then(v=>console.log(v)) // 123
 ```
+
+`await`命令后面的Promise对象如果变为reject状态，则reject参数会被catch方法回调函数接收到。  
+```javascript
+async function f(){
+  await Promise.reject('出错了')
+}
+f()
+.then(v=>console.log(v))
+.catch(e=>{console.log(e)}) // '出错了'
+```
