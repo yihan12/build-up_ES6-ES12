@@ -151,3 +151,13 @@ async function getTitle(url){
 }
 getTitle('https://tc39.github.io/ecma262/').then(console.log)
 ```
+
+### `await` 命令  
+
+> 正常情况下，await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象。  
+```javascript
+async function f(){
+  return await 123
+}
+f().then(v=>console.log(v)) // 123
+```
