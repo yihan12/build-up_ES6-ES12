@@ -54,3 +54,7 @@ console.log(typeof Point); // function
 
 Point(); // Uncaught TypeError: Class constructor Point cannot be invoked without 'new'
 ```
+
+* **二、类声明不能被提升。**  
+```javascript
+```
