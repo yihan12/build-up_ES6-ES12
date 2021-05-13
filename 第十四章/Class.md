@@ -127,7 +127,7 @@ class Bar extends Foo{
 console.log(Bar.classMethod()); // 'hello, too'
 ```
 
-* **五、类的静态属性和实例属性。**  
+* **五、类的静态属性和实例属性。**   
 静态属性  
 ```javascript
 // 旧方法
@@ -144,5 +144,8 @@ class MyClass {
   }
 }
 console.log(MyClass.props); // 1
+```
+实例属性  
+```javascript
 ```
 
