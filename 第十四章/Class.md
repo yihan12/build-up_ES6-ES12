@@ -50,7 +50,7 @@ class Point{
 const p = new Point(25, 8);
 console.log(p.toString()); // '(25, 8)'
 
-console.log(typeof Point); // function
+console.log(typeof Point); // 'function'
 
 Point(); // Uncaught TypeError: Class constructor Point cannot be invoked without 'new'
 ```
@@ -95,10 +95,10 @@ console.log(typeof Foo); // 'function'
 console.log(typeof Foo.staticMethod); // 'function'
 console.log(Foo.staticMethod()); // 'classy'
 console.log(Foo.prototype.prototypeMethod()); // 'prototypical'
+console.log(Foo.prototypeMethod()); // Uncaught TypeError: Foo.prototypeMethod is not a function
 
 // 原型方法
 console.log(typeof Foo.prototype.prototypeMethod); // 'function'
 console.log(foo.prototypeMethod()); // 'prototypical'
 console.log(foo.staticMethod()); // Uncaught TypeError: foo.staticMethod is not a function
-console.log(Foo.prototypeMethod()); // Uncaught TypeError: Foo.prototypeMethod is not a function
 ```
