@@ -38,4 +38,19 @@ console.log(typeof Point); // 'function'
 
 * **一、只能通过`new`调用类，不能通过函数调用。**  
 ```javascript
+class Point{
+  constructor(x, y){
+    this.x = x;
+    this.y = y;
+  }
+  toString(){
+    return `(${this.x}, ${this.y})`
+  }
+}
+const p = new Point(25, 8);
+console.log(p.toString()); // '(25, 8)'
+
+console.log(typeof Point); // function
+
+Point(); // Uncaught TypeError: Class constructor Point cannot be invoked without 'new'
 ```
