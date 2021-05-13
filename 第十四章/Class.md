@@ -147,5 +147,18 @@ console.log(MyClass.props); // 1
 ```
 实例属性  
 ```javascript
+class MyClass{
+  myProp = 42;
+  static props = 1;
+  constructor(){
+    console.log(MyClass.props); // 1
+    console.log(this.myProp); // 42
+  }
+}
+console.log(MyClass.myProp); // undefined
+console.log(MyClass.props); // 1  
+const p = new MyClass();
+console.log(p.myProp); // 42
+console.log(p.props); // undefined
 ```
 
