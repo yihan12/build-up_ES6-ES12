@@ -161,4 +161,33 @@ const p = new MyClass();
 console.log(p.myProp); // 42
 console.log(p.props); // undefined
 ```
+实例属性的使用
+```javascript
+// 以前定义实例属性时，只能写在类的`constructor`方法里
+class ReactCounter extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      count:0
+    }
+  }
+}
+
+// 新写法
+class ReactCounter extends React.Component{
+  state = {
+    count: 0
+  }
+}
+// 增强可读性
+class ReactCounter extends React.Component{
+  state;
+  constructor(props){
+    super(props);
+    this.state = {
+      count: 0 
+    }
+  }
+}
+```
 
