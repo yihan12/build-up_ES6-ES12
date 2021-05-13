@@ -60,3 +60,7 @@ Point(); // Uncaught TypeError: Class constructor Point cannot be invoked withou
 new Foo(); // Uncaught ReferenceError: Cannot access 'Foo' before initialization
 class Foo{}
 ```
+
+* **三、类的表达式定义。**  
+```javascript
+```
