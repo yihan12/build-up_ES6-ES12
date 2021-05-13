@@ -76,4 +76,29 @@ console.log(Me.name); // Uncaught ReferenceError: Me is not defined
 
 * **四、类的构造器、静态方法、原型方法**  
 ```javascript
+class Foo{
+  constructor(prop){
+    this.prop = prop;
+  }
+  static staticMethod(){
+    return 'classy';
+  }
+  prototypeMethod(){
+    return 'prototypical'
+  }
+}
+const foo = new Foo(123);
+console.log(Foo === Foo.prototype.constructor); // true
+console.log(typeof Foo); // 'function'
+
+// 静态方法
+console.log(typeof Foo.staticMethod); // 'function'
+console.log(Foo.staticMethod()); // 'classy'
+console.log(Foo.prototype.prototypeMethod()); // 'prototypical'
+
+// 原型方法
+console.log(typeof Foo.prototype.prototypeMethod); // 'function'
+console.log(foo.prototypeMethod()); // 'prototypical'
+console.log(foo.staticMethod()); // Uncaught TypeError: foo.staticMethod is not a function
+console.log(Foo.prototypeMethod()); // Uncaught TypeError: Foo.prototypeMethod is not a function
 ```
