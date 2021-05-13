@@ -126,3 +126,8 @@ class Bar extends Foo{
 }
 console.log(Bar.classMethod()); // 'hello, too'
 ```
+
+* **五、类的静态属性和实例属性。**  
+```javascript
+
+```
