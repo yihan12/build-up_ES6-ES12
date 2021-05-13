@@ -114,4 +114,15 @@ console.log(Bar.classMethod()); // 'hello'
 ```
 静态方法也可以从`super`对象上调用  
 ```javascript
+class Foo{
+  static classMethod(){
+    return 'hello'
+  }
+}
+class Bar extends Foo{
+  static classMethod(){
+    return super.classMethod() + ', too';
+  }
+}
+console.log(Bar.classMethod()); // 'hello, too'
 ```
