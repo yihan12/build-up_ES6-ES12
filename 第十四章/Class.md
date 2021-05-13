@@ -33,3 +33,9 @@ console.log(cp instanceof ColorPoint); // true
 console.log(cp instanceof Point); // true
 console.log(typeof Point); // 'function'
 ```
+
+### 要点  
+
+* 一、只能通过`new`调用类，不能通过函数调用。  
+```javascript
+```
