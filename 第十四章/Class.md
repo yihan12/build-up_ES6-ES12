@@ -112,3 +112,6 @@ class Foo{
 class Bar extends Foo{}
 console.log(Bar.classMethod()); // 'hello'
 ```
+静态方法也可以从`super`对象上调用  
+```javascript
+```
