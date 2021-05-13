@@ -104,5 +104,11 @@ console.log(foo.staticMethod()); // Uncaught TypeError: foo.staticMethod is not 
 ```
 父类的静态方法可以被子类继承  
 ```javascript
-
+class Foo{
+  static classMethod(){
+    return 'hello'
+  }
+}
+class Bar extends Foo{}
+console.log(Bar.classMethod()); // 'hello'
 ```
