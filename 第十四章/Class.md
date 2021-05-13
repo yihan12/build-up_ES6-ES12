@@ -128,6 +128,21 @@ console.log(Bar.classMethod()); // 'hello, too'
 ```
 
 * **五、类的静态属性和实例属性。**  
+静态属性  
 ```javascript
+// 旧方法
+class Foo{
 
+}
+Foo.prop = 1;
+
+// 新方法
+class MyClass {
+  static props = 1;
+  constructor(){
+    console.log(MyClass.myStaticProp); // 1
+  }
+}
+console.log(MyClass.props); // 1
 ```
+
