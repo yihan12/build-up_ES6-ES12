@@ -73,3 +73,7 @@ console.log(init.getClassName()); // Me
 console.log(MyClass.name); // Me
 console.log(Me.name); // Uncaught ReferenceError: Me is not defined
 ```
+
+* **四、类的构造器、静态方法、原型方法**  
+```javascript
+```
