@@ -191,6 +191,6 @@ class ReactCounter extends React.Component{
 }
 ```
 
-* **六、类的取值函数（getter）和存值函数（setter）  
+* **六、类的取值函数（getter）和存值函数（setter）**   
 ```javascript
 ```
