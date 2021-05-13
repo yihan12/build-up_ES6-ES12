@@ -57,4 +57,6 @@ Point(); // Uncaught TypeError: Class constructor Point cannot be invoked withou
 
 * **二、类声明不能被提升。**  
 ```javascript
+new Foo(); // Uncaught ReferenceError: Cannot access 'Foo' before initialization
+class Foo{}
 ```
