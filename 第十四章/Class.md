@@ -63,4 +63,13 @@ class Foo{}
 
 * **三、类的表达式定义。**  
 ```javascript
+const MyClass  = class Me{
+  getClassName(){
+    return Me.name
+  }
+}
+const init = new MyClass();
+console.log(init.getClassName()); // Me
+console.log(MyClass.name); // Me
+console.log(Me.name); // Uncaught ReferenceError: Me is not defined
 ```
