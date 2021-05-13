@@ -138,7 +138,7 @@ Foo.prop = 1;
 
 // 新方法
 class MyClass {
-  static props = 1;
+  static myStaticProp = 1;
   constructor(){
     console.log(MyClass.myStaticProp); // 1
   }
