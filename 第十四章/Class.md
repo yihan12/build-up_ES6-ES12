@@ -102,3 +102,7 @@ console.log(typeof Foo.prototype.prototypeMethod); // 'function'
 console.log(foo.prototypeMethod()); // 'prototypical'
 console.log(foo.staticMethod()); // Uncaught TypeError: foo.staticMethod is not a function
 ```
+父类的静态方法可以被子类继承  
+```javascript
+
+```
