@@ -246,3 +246,7 @@ for(let x of new IterableArguments('hello','world')){
 // 'hello'
 // 'world'
 ```
+
+### Class的继承  
+
+> Class可以通过extends关键字实现继承
