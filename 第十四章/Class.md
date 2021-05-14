@@ -281,6 +281,7 @@ console.log(Object.getPrototypeOf(ColorPoint) === Point); // true
 ```
 
 **`super`关键字**  
+* 第一种情况，super作为函数调用时代表父类的构造函数。  
 ```javascript
 class A {
   constructor(){
@@ -295,4 +296,8 @@ class B extends A{
 
 new A() // A
 new B() // B
+```
+
+* 第二种情况，super作为对象时，在普通方法中指向父类的原型对象；在静态方法中指向父类。  
+```javascript
 ```
