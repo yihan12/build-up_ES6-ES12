@@ -230,4 +230,19 @@ console.log('set' in descriptor); // true
 
 * **七、类的Generator方法**  
 ```javascript
+class IterableArguments{
+  constructor(...args){
+    this.args = args;
+  }
+  *[Symbol.iterator](){
+    for(let arg of this.args){
+      yield arg;
+    }
+  }
+}
+for(let x of new IterableArguments('hello','world')){
+  console.log(x);
+}
+// 'hello'
+// 'world'
 ```
