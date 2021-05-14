@@ -192,5 +192,18 @@ class ReactCounter extends React.Component{
 ```
 
 * **六、类的取值函数（getter）和存值函数（setter）**   
+prop属性有对应的存值函数和取值函数，因此赋值和读取行为都被自定义了。
 ```javascript
+class MyClass{
+  constructor(){}
+  get prop(){
+    return 'getter';
+  }
+  set prop(value){
+    console.log('setter:' + value);
+  }
+}
+let inst = new MyClass();
+inst.prop = 123; // 'setter:123'
+console.log(inst.prop); // 'getter'
 ```
