@@ -279,3 +279,20 @@ console.log(cp instanceof Point); // true
 // Object.getPrototypeof()可以用来从子类获取父类
 console.log(Object.getPrototypeOf(ColorPoint) === Point); // true
 ```
+
+**`super`关键字**  
+```javascript
+class A {
+  constructor(){
+    console.log(new.target.name);
+  }
+}
+class B extends A{
+  constructor(){
+    super() // 相当于A.prototype.constructor.call(this)
+  }
+}
+
+new A() // A
+new B() // B
+```
