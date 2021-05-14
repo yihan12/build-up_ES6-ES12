@@ -276,4 +276,6 @@ const cp = new ColorPoint(25, 8, 'green');
 console.log(cp.toString()); // 'green (25||8)'
 console.log(cp instanceof ColorPoint); // true
 console.log(cp instanceof Point); // true
+// Object.getPrototypeof()可以用来从子类获取父类
+console.log(Object.getPrototypeOf(ColorPoint) === Point); // true
 ```
