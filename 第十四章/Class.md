@@ -249,4 +249,31 @@ for(let x of new IterableArguments('hello','world')){
 
 ### Class的继承  
 
-> Class可以通过extends关键字实现继承
+> Class可以通过extends关键字实现继承  
+
+```javascript
+class Point{
+  constructor(x, y ){
+    this.x = x;
+    this.y = y;
+  }
+  toString() {
+    return `(${this.x}||${this.y})`
+  }
+} 
+class ColorPoint extends Point{
+  constructor(x, y, color){
+    super(x, y); // 调用父类的constructor(x,y)
+    this.color = color; // 子类的constructor方法没有调用super之前不能使用this关键字
+  }
+
+  toString(){
+    return this.color + ' ' + super.toString(); // 调用父类的toString
+  }
+}
+
+const cp = new ColorPoint(25, 8, 'green');
+console.log(cp.toString()); // 'green (25||8)'
+console.log(cp instanceof ColorPoint); // true
+console.log(cp instanceof Point); // true
+```
