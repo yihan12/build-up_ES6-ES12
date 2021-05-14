@@ -207,3 +207,23 @@ let inst = new MyClass();
 inst.prop = 123; // 'setter:123'
 console.log(inst.prop); // 'getter'
 ```
+
+存值函数和取值函数是设置在属性的Descriptor对象上的。  
+```javascript
+class CustomHTMLElement{
+  constructor(element){
+    this.element = element;
+  }
+  get html(){
+    return this.element.innerHTML;
+  }
+  set html(value){
+    this.element.innerHTML = value
+  }
+}
+const descriptor = Object.getOwnPropertyDescriptor(
+  CustomHTMLElement.prototype,'html'
+);
+console.log('get' in descriptor); // true
+console.log('set' in descriptor); // true
+```
