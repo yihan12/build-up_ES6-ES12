@@ -227,3 +227,7 @@ const descriptor = Object.getOwnPropertyDescriptor(
 console.log('get' in descriptor); // true
 console.log('set' in descriptor); // true
 ```
+
+* **七、类的Generator方法**  
+```javascript
+```
