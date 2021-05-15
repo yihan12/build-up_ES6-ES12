@@ -335,5 +335,13 @@ console.log(b.m); // undefined
 
 如果属性定义在父类的原型对象上，`super`就可以取到。  
 ```javascript
-
+class A{}
+A.prototype.x = 2;
+class B extends A{
+  constructor(){
+    super();
+    console.log(super.x); // 2
+  }
+}
+let b = new B();
 ```
