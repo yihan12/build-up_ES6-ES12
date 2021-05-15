@@ -368,3 +368,7 @@ class B extends A{
 let b = new B();
 b.m()
 ```
+
+由于绑定子类的this，因此如果通过`super`对某个属性赋值，这是`super`就是`this`，赋值的属性会变成子类属性的实例。  
+```javascript
+```
