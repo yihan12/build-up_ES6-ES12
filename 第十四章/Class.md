@@ -391,4 +391,26 @@ let b = new B();
 
 如果`super`作为对象用在静态方法之中，这时`super`将指向父类，而不是父类的原型对象。  
 ```javascript
+class Parent{
+  static myMethod(msg){
+    console.log('static',msg);
+  }
+
+  myMethod(msg){
+    console.log('instance', msg);
+  }
+}
+class Child extends Parent{
+  static myMethod(msg){
+    super.myMethod(msg);
+  }
+
+  myMethod(msg){
+    super.myMethod(msg);
+  }
+}
+Child.myMethod(1); // static 1
+
+const child = new Child(); 
+child.myMethod(2); // instance 2
 ```
