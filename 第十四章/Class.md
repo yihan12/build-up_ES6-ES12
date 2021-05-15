@@ -371,4 +371,20 @@ b.m()
 
 由于绑定子类的this，因此如果通过`super`对某个属性赋值，这是`super`就是`this`，赋值的属性会变成子类属性的实例。  
 ```javascript
+class A{
+  constructor(){
+    this.x = 1;
+  }
+}
+class B extends A{
+  constructor(){
+    super();
+    this.x = 2;
+    super.x = 3;
+    // super.x 相当于读取的时A.prototype.x
+    console.log(super.x); // undefined
+    console.log(this.x); // 3
+  }
+}
+let b = new B();
 ```
