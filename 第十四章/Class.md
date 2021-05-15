@@ -419,4 +419,21 @@ child.myMethod(2); // instance 2
 
 使用super的时候，必须显式指定是作为函数还是作为对象使用，否则会报错。  
 ```javascript
+class A{}
+
+class B extends A{
+  constructor(){
+    super();
+    console.log(super); // 报错
+  }
+}
+
+// 正确的使用
+class C extends A{
+  constructor(){
+    super();
+    console.log(super.valueOf() instanceof C); // true
+  }
+}
+let c = new C();
 ```
