@@ -402,10 +402,12 @@ class Parent{
 }
 class Child extends Parent{
   static myMethod(msg){
+  // super在静态方法中指向父类
     super.myMethod(msg);
   }
 
   myMethod(msg){
+  // super在普通方法中指向父类的原型对象
     super.myMethod(msg);
   }
 }
