@@ -330,3 +330,10 @@ class B extends A{
 let b = new B();
 console.log(b.m); // undefined
 ```
+
+上面的代码中，p是父类A的实例的属性，因此`super.p`就引用不到它  
+
+如果属性定义在父类的原型对象上，`super`就可以取到。  
+```javascript
+
+```
