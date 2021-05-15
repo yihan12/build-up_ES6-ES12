@@ -348,4 +348,23 @@ let b = new B();
 
 ES6规定，通过`super`调用父类的方法时，`super`会绑定子类的`this`。  
 ```javascript
+class A{
+  constructor(){
+    this.x = 1;
+  }
+  print(){
+    console.log(this.x); // 2
+  }
+}
+class B extends A{
+  constructor(){
+    super();
+    this.x = 2;
+  }
+  m(){
+    super.print();
+  }
+}
+let b = new B();
+b.m()
 ```
