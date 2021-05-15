@@ -416,3 +416,7 @@ Child.myMethod(1); // static 1
 const child = new Child(); 
 child.myMethod(2); // instance 2
 ```
+
+使用super的时候，必须显式指定是作为函数还是作为对象使用，否则会报错。  
+```javascript
+```
