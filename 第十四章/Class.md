@@ -345,3 +345,7 @@ class B extends A{
 }
 let b = new B();
 ```
+
+ES6规定，通过`super`调用父类的方法时，`super`会绑定子类的`this`。  
+```javascript
+```
