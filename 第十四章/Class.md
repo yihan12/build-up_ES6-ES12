@@ -300,4 +300,17 @@ new B() // B
 
 * 第二种情况，super作为对象时，在普通方法中指向父类的原型对象；在静态方法中指向父类。  
 ```javascript
+class A{
+  p(){
+    return 2;
+  }
+}
+class B extends A{
+  constructor(){
+    super();
+    console.log(super.p()); // 2
+    // super.p() 相当于A.prototype.p()
+  }
+}
+let b = new B();
 ```
