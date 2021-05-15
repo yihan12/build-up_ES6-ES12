@@ -437,3 +437,13 @@ class C extends A{
 }
 let c = new C();
 ```
+
+由于对象总是继承其他对象，所以可以在任意一个对象中使用`super`关键字
+```javascript
+const obj = {
+  toString(){
+    return 'MYobject:' + super.toString();
+  }
+}
+console.log(obj.toString()); // 'MYobject:[object Object]'
+```
