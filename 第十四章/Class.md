@@ -314,3 +314,7 @@ class B extends A{
 }
 let b = new B();
 ```
+
+由于`super`指向父类的原型对象，所以定义在父类实例上的方法或属性是无法通过`super`调用的。  
+```javascript
+```
