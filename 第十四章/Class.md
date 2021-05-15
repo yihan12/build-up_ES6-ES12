@@ -317,4 +317,16 @@ let b = new B();
 
 由于`super`指向父类的原型对象，所以定义在父类实例上的方法或属性是无法通过`super`调用的。  
 ```javascript
+class A{
+  constructor(){
+    this.p = 2;
+  }
+}
+class B extends A{
+  get m(){
+    return super.p;
+  }
+}
+let b = new B();
+console.log(b.m); // undefined
 ```
