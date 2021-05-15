@@ -388,3 +388,7 @@ class B extends A{
 }
 let b = new B();
 ```
+
+如果`super`作为对象用在静态方法之中，这时`super`将指向父类，而不是父类的原型对象。  
+```javascript
+```
