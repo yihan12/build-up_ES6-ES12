@@ -1,3 +1,4 @@
+// var 全局变量
 const declarativeVariable = 'd';
 var objectVariable = 'o';
 
