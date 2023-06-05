@@ -12,3 +12,12 @@ for (const elem of arr) {
 // Output:
 // 'hello'
 // 'world'
+
+const arr = ['hello', 'world'];
+for (let i=0; i<arr.length; i++) {
+  const elem = arr[i];
+  console.log(elem);
+}
+// Output:
+// 'hello'
+// 'world'
