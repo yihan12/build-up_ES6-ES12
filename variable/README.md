@@ -201,7 +201,7 @@ func() // 不报错
 
 ```
 
-### `const`命令  
+# const命令  
 
 一般使用场景：
 ```javascript
@@ -239,7 +239,7 @@ const resultTpl =
 `;
 ```
 
-### `var`、`let`、`const`有什么区别  
+# 区别
 
 * **相同点**：`var`,`let`,`const`声明的变量，是不能被`delete`的;
 * **区别**：  
