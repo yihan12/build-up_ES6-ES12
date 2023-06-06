@@ -64,7 +64,9 @@ console.log(i)//i is not defined i无法污染外部函数
 ```  
 在for循环中使用var声明的循环变量，会跳出循环体污染当前的函数。
 
-### `let`、`const`暂时性死区（temporal dead zone）  
+# TDZ
+
+> `let`、`const`暂时性死区（temporal dead zone）
 
 `let`,`const`声明的变量拥有**暂时性死区**：当进入它的作用域，它不能被访问（获取或设置）直到执行到达声明。  
 简单描述：  
