@@ -107,7 +107,9 @@ if (true) { // enter new scope, TDZ starts
 }
 ```
 
-### `var`变量提升  
+# 变量提升  
+
+> `var`变量提升  
 
 JavaScript中，我们通常说的作用域是函数作用域，使用var声明的变量，无论是在代码的哪个地方声明的，都会提升到当前作用域的最顶部，这种行为叫做**变量提升（Hoisting）**  
 
@@ -164,7 +166,9 @@ function test() {
 test() //b is not defined
 ```  
 
-### `let`不允许重复声明  
+# 不允许重复声明  
+
+> `let`不允许重复声明  
 
 `let`不允许在相同作用域内，重复声明同一个变量。  
 ```javascript
