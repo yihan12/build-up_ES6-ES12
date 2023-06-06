@@ -20,7 +20,7 @@
 
 **理解ES6新功能，多个使用实例加深新功能的熟悉,加深新功能的印象**  
 
-* **[第一章 变量](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
+* **[第一章 变量声明](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
   * [`let`、`const`实现块级作用域](https://github.com/yihan12/build-up_ES6/blob/main/variable#块级作用域)
   * [`let`、`const`暂时性死区（temporal dead zone）](https://github.com/yihan12/build-up_ES6/blob/main/variable#TDZ)
   * [`var`变量提升](https://github.com/yihan12/build-up_ES6/blob/main/variable#变量提升)
