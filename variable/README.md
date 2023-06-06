@@ -243,7 +243,7 @@ const resultTpl =
 
 > 在JavaScript中，const仅表示绑定（变量名和变量值之间的关联）是不可变的。值本身可能是可变的，如以下示例中的obj。
 
-```
+```javascript
 const obj = { prop: 0 };
 obj.prop = obj.prop + 1; 
 console.log(obj.prop) // 1
@@ -256,8 +256,16 @@ console.log(obj.prop) // 1
 它们只能在脚本的顶层通过const、let和类声明创建。
 * 全局对象变量被存储在所谓全局对象的属性中。
 它们是在脚本的顶层通过var和函数声明创建的。
-可以通过全局变量global alThis访问全局对象，它可以用来创建、读取和删除全局对象变量。
+可以通过全局变量globalThis访问全局对象，它可以用来创建、读取和删除全局对象变量。
 除此之外，全局对象变量像普通变量一样工作。
+
+```javascript
+window === globalThis // true
+
+console.log(window.a); // 1
+var a = 1 ;
+console.log(window.a); // 1
+```
 
 # 区别
 
