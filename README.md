@@ -20,8 +20,8 @@
 
 **理解ES6新功能，多个使用实例加深新功能的熟悉,加深新功能的印象**  
 
-* **[第一章 变量](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E5%8F%98%E9%87%8F/README.md)**
-  * [let、const实现块级作用域](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E5%8F%98%E9%87%8F#let、const实现块级作用域)
+* **[第一章 变量](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
+  * [let、const实现块级作用域](https://github.com/yihan12/build-up_ES6/blob/main/variable#块级作用域)
   * [TDZ](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E5%8F%98%E9%87%8F#let、const实现块级作用域)
   * [变量提升](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E5%8F%98%E9%87%8F#变量提升)
 
