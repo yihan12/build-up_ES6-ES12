@@ -2,6 +2,8 @@
 
 2015年6月，ECMAScript的第6个版本推出，这是我们称之为ES2015或ES6的javascript的最大转变。
 
+学习ES6很重要，因为一个原因是它使JavaScript更好、更易于编写，而且ES6还与当今的现代Web技术（如React、Vue、Node. js等）一起使用。
+
 下面是ES6的一些笔记，希望对大家有用。
 
 * **[第一章 变量声明](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
