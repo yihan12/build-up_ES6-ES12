@@ -21,6 +21,11 @@ function f() {
 
 `let`,`const`创建的变量都是**块级作用域**：它们只存在包围它们的最深代码块中。
 
+作用域有哪些？
+* 块级作用域
+* 函数作用域
+* 全局作用域
+
 ```javascript
 function func() {
     if (true) {
@@ -268,6 +273,7 @@ console.log(window.a); // 1
 ```
 
 # 区别
+`var`、`let`和`const`是JavaScript用来存储和声明变量的特殊关键字。它们每个都有唯一性（差异），将简要讨论。
 
 * **相同点**：`var`,`let`,`const`声明的变量，是不能被`delete`的;
 * **区别**：  
