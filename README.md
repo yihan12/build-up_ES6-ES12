@@ -14,8 +14,8 @@
   * [`const`命令](https://github.com/yihan12/build-up_ES6/blob/main/variable#const命令)
   * [`var`、`let`、`const`有什么区别](https://github.com/yihan12/build-up_ES6/blob/main/variable#区别)
   
-* **[第一章 字符串]()**
-  * [模板字符串](#模板字符串)
+* **[第二章 字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)**
+  * [模板字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings#模板字符串)
 
 - [x] [第一章 var/let/const、块级作用域、TDZ、变量提升](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E5%8F%98%E9%87%8F.md)
 - [x] [第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%BA%8C%E7%AB%A0/%E5%AD%97%E7%AC%A6%E4%B8%B2.md)  
