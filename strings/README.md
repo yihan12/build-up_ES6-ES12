@@ -6,6 +6,20 @@
 ```javascript
 `\`` === "`"; // true
 `\${1}` === "${1}"; // true
+```
+
+在下面这个例子中，字符串连接有两个令我印象深刻的恼人特性。用反斜杠转义撇号，并试图用双引号和单引号弄清楚字符串末尾发生了什么。模板文字减轻了这两个问题，我们留下了更清晰的代码行。
+
+```javascript
+var p = {
+  name: 'Jackson',
+  nn: 'Jak',
+};
+// STRING CONCATENATION
+console.log('Hi, I\'m ' + p.name + '! Call me "' + p.nn + '".');
+// TEMPLATE LITERALS
+console.log(`Hi, I'm ${p.name}! Call me "${p.nn}".`);
+// "Hi, I'm Jackson! Call me 'Jak'."
 
 ```
 ES5 
