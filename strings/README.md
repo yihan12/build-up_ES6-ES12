@@ -79,3 +79,9 @@ const output = myTag`That ${person} is a ${age}.`;
 console.log(output);
 // That Mike is a youngster.
 ```
+
+#### 模板字符串的特点：
+* 用反引号（`）标识。
+* 如果使用模板字符串表示多行字符串，所有的空格和缩进都会被保留在输出之中。
+* 模板字符串中嵌入变量，需要将变量名写在${}之中。一些运算也能嵌入其中。
+* 模板字符串甚至还能嵌套。
