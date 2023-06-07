@@ -16,9 +16,7 @@
   
 * **[第二章 字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)**
   * [模板字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings#模板字符串)
-
-- [x] [第一章 var/let/const、块级作用域、TDZ、变量提升](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E5%8F%98%E9%87%8F.md)
-- [x] [第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%BA%8C%E7%AB%A0/%E5%AD%97%E7%AC%A6%E4%B8%B2.md)  
+  
 - [x] [第三章 变量的解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%89%E7%AB%A0/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC.md)  
 - [x] [第四章 数值新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%9B%9B%E7%AB%A0/%E6%95%B0%E5%80%BC.md)  
 - [x] [第五章 函数的默认参数、箭头函数、展开运算符、尾调用优化](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%BA%94%E7%AB%A0/%E5%87%BD%E6%95%B0.md)  
