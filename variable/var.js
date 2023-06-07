@@ -4,3 +4,6 @@ var objectVariable = 'o';
 
 console.log(window.declarativeVariable) // undefined
 console.log(window.objectVariable) // 'o'
+
+var number1 = 15 
+console.log(window.number1,globalThis.number1,window===globalThis); // 15 15 true
