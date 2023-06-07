@@ -41,6 +41,23 @@ not ${2 * a + b}.`);
 ```
 如您所见，在使用模板文字时，我们的代码更易于阅读。您可以轻松查看我们的字符串在说什么以及变量插入的位置。
 
+对于换行符来说，我们可以看下面这个例子：  
+```javascript
+// STRING CONCATENATION
+console.log("Dear Mom,\n" + 
+"Hope you are well.\n" + 
+"\tLove, your son")
+// TEMPLATE LITERALS
+console.log(`Dear Mom,
+Hope you are well.
+    Love, your son`);
+// Dear Mom,
+// Hope you are well.
+//     Love, your son
+```
+
+使用模板字符串，插入任何新行字符、制表符、空格等都将成为字符串的一部分。这既是福也是祸，但就易读性而言绝对是一个优势。
+
 不过，在JavaScript术语中，模板字符串是一种连接字符串的方法，同时允许嵌入表达式并提高易读性。
 ```javascript
 const person = "Mike";
