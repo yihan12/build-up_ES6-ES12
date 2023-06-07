@@ -48,6 +48,26 @@ function func() {
 func()
 console.log(tmp); // tmp is not defined
 ```
+下面的式子更难看出函数作用域与块级作用域的区别
+```javascript
+function myFunc(){
+    var number1 = 15 // 函数作用域
+    if(true){
+        let number1 = 20 // 块级作用域
+        console.log(number1) // 20
+
+    }
+    console.log(number1) // 15
+}
+myFunc();
+console.log(number1) // number1 is not defined
+```
+
+而全局作用域，可以从JavaScript程序中的任何位置访问。
+```javascript
+var number1 = 15 
+console.log(window.number1,globalThis.number1,window===globalThis); // 15 15 true
+```
 
 **面试题：循环中定时器闭包**  
 
