@@ -25,7 +25,7 @@ not ${2 * a + b}.`);
 // "Fifteen is 15 and
 // not 20."
 ```
-
+不过，在JavaScript术语中，模板字符串是一种连接字符串的方法，同时允许嵌入表达式并提高易读性。
 ```javascript
 const person = "Mike";
 const age = 28;
