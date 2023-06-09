@@ -377,5 +377,61 @@ function displaySummary({ name, scores: { maths = 0, english = 0, science = 0 } 
 
 #### 对象结构
 
+对象解构构像是：用变量声明属性，变量值即为属性值，简单来说，就是提取对象中的属性。
+```javascript
+const student = {
+    firstname: 'Glad',
+    lastname: 'Chinda',
+    country: 'Nigeria'
+};
+
+// Object Destructuring
+const { firstname, lastname, country } = student;
+
+console.log(firstname, lastname, country); // Glad Chinda Nigeria
+```
+利用解构给变量重新赋值
+```javascript
+// Initialize local variables
+let country = 'Canada';
+let firstname = 'John';
+let lastname = 'Doe';
+
+const student = {
+    firstname: 'Glad',
+    lastname: 'Chinda',
+    country: 'Nigeria'
+};
+
+// Reassign firstname and lastname using destructuring
+// Enclose in a pair of parentheses, since this is an assignment expression
+({ firstname, lastname } = student);
+
+// country remains unchanged (Canada)
+console.log(firstname, lastname, country); // Glad Chinda Canada
+```
+上面代码，用解构赋值的方式重新给firstname, lastname变量赋值，所以后面打印的时候，firstname, lastname显示是student内部的firstname, lastname。country并未重新赋值，所以还是之前定义的名字。如果将中间的代码改为`({ firstname, lastname , country} = student);`。那么, country的值也会被重新赋值，为'Nigeria'
+
+下面看下嵌套对象的结构：
+```javascript
+const student = {
+    name: 'John Doe',
+    age: 16,
+    scores: {
+        maths: 74,
+        english: 63
+    }
+};
+
+// We define 3 local variables: name, maths, science
+const { name, scores: {maths, science = 50} } = student;
+
+console.log(`${name} scored ${maths} in Maths and ${science} in Elementary Science.`);
+
+// John Doe scored 74 in Maths and 50 in Elementary Science.
+```
+使用嵌套对象解构时，要小心避免使用空的嵌套对象字面量。虽然它是有效的语法，但它实际上没有赋值。例如，上面的science，如果改成 `const { name, scores: {maths, science} } = student;`。那么`science`的值将是`undefined`
+
+#### 数组解构
 
 **下一章**：[第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)
