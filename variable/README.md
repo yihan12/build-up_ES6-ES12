@@ -432,6 +432,39 @@ console.log(`${name} scored ${maths} in Maths and ${science} in Elementary Scien
 ```
 使用嵌套对象解构时，要小心避免使用空的嵌套对象字面量。虽然它是有效的语法，但它实际上没有赋值。例如，上面的science，如果改成 `const { name, scores: {maths, science} } = student;`。那么`science`的值将是`undefined`
 
+点运算配合解构赋值：
+```javascript
+const person = {
+    name: 'John Doe',
+    country: 'Canada',
+    city:'shenzhen',
+    org:'123',
+    id:'1'
+};
+
+// Assign default value of 25 to age if undefined
+const { id='', ...all } = person;
+console.log(all) //{ name: 'John Doe',country: 'Canada',city:'shenzhen',org:'123',}
+```
+从案例中我们可以可以通过点运算+对象解构赋值，可以去除对象的属性，并将剩余属性赋值给`all`。  
+* 从对象中取多个属性，有了新的处理。
+* 从对象中无损删除属性，有了新的处理。
+
+当然我们也可以删除多个属性：
+```
+const person = {
+    name: 'John Doe',
+    country: 'Canada',
+    city:'shenzhen',
+    org:'123',
+    id:'1'
+};
+
+// Assign default value of 25 to age if undefined
+const { id="",name="", ...all } = person;
+console.log(all) //{country: 'Canada',city:'shenzhen',org:'123'}
+```
+
 #### 数组解构
 
 **下一章**：[第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)
