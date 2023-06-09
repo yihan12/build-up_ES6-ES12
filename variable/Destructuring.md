@@ -40,7 +40,7 @@ function displaySummary({ name, scores: { maths = 0, english = 0, science = 0 } 
 }
 ```
 
-# 对象结构
+# 对象解构
 
 对象解构构像是：用变量声明属性，变量值即为属性值，简单来说，就是提取对象中的属性。
 ```javascript
