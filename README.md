@@ -18,7 +18,8 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
   * [`let`不允许重复声明](https://github.com/yihan12/build-up_ES6/blob/main/variable#不允许重复声明)
   * [`const`命令](https://github.com/yihan12/build-up_ES6/blob/main/variable#const命令)
   * [`var`、`let`、`const`有什么区别](https://github.com/yihan12/build-up_ES6/blob/main/variable#区别)
-  * [解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/variable#解构赋值)
+  * [解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md)
+    * [对象解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#对象解构)
   
 * **[第二章 字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)**
   * [模板字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings#模板字符串)
