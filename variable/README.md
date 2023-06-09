@@ -336,5 +336,43 @@ console.log(window.a); // 1
 
 # 解构赋值
 
+> 解构只是意味着将复杂的结构分解成更简单的部分。在JavaScript中，这种复杂的结构通常是一个对象或一个数组。使用解构语法，您可以从数组和对象中提取更小的片段。解构语法可用于变量声明或变量赋值。您还可以使用嵌套解构语法来处理嵌套结构。
+
+```javascript
+// old
+const student = {
+    name: 'John Doe',
+    age: 16,
+    scores: {
+        maths: 74,
+        english: 63,
+        science: 85
+    }
+};
+
+function displaySummary(student) {
+    console.log('Hello, ' + student.name);
+    console.log('Your Maths score is ' + (student.scores.maths || 0));
+    console.log('Your English score is ' + (student.scores.english || 0));
+    console.log('Your Science score is ' + (student.scores.science || 0));
+}
+
+displaySummary(student);
+
+// Hello, John Doe
+// Your Maths score is 74
+// Your English score is 63
+// Your Science score is 85
+```
+用ES6结构赋值，我们可以这么写
+```javascript
+// ES6
+function displaySummary({ name, scores: { maths = 0, english = 0, science = 0 } }) {
+    console.log('Hello, ' + name);
+    console.log('Your Maths score is ' + maths);
+    console.log('Your English score is ' + english);
+    console.log('Your Science score is ' + science);
+}
+```
 
 **下一章**：[第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)
