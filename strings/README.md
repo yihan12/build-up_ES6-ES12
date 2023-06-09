@@ -88,4 +88,5 @@ console.log(output);
 
 # 模板标签
 
-# 
+# 字符串新增方法
+
