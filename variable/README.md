@@ -375,4 +375,7 @@ function displaySummary({ name, scores: { maths = 0, english = 0, science = 0 } 
 }
 ```
 
+#### 对象结构
+
+
 **下一章**：[第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)
