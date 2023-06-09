@@ -4,13 +4,14 @@
 
 下面是ES6的一些笔记，如果对ES6的知识有所吸收，希望点下star。
 
-* **[第一章 变量声明](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
+* **[第一章 变量](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
   * [`let`、`const`实现块级作用域](https://github.com/yihan12/build-up_ES6/blob/main/variable#块级作用域)
   * [`let`、`const`暂时性死区（temporal dead zone）](https://github.com/yihan12/build-up_ES6/blob/main/variable#TDZ)
   * [`var`变量提升](https://github.com/yihan12/build-up_ES6/blob/main/variable#变量提升)
   * [`let`不允许重复声明](https://github.com/yihan12/build-up_ES6/blob/main/variable#不允许重复声明)
   * [`const`命令](https://github.com/yihan12/build-up_ES6/blob/main/variable#const命令)
   * [`var`、`let`、`const`有什么区别](https://github.com/yihan12/build-up_ES6/blob/main/variable#区别)
+  * [解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/variable#解构赋值)
   
 * **[第二章 字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)**
   * [模板字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings#模板字符串)
