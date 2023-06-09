@@ -334,4 +334,7 @@ console.log(window.a); // 1
 
 **修改声明的变量**：`var`和`let`可以修改声明的变量；`const`声明一个只读常量，一旦声明，常量的值就不能改变。
 
+# 解构赋值
+
+
 **下一章**：[第二章 模板字符串、字符串新特性](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)
