@@ -130,4 +130,9 @@ const { id="",name="", ...all } = person;
 console.log(all) //{country: 'Canada',city:'shenzhen',org:'123'}
 ```
 
-# 数组解构
+# 数组解构  
+> 在数组解构中，您在赋值表达式的左侧使用数组文字。数组文字上的每个变量名都映射到解构数组上同一索引处的相应项目。
+```javascript
+```
+
+
