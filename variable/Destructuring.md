@@ -133,6 +133,12 @@ console.log(all) //{country: 'Canada',city:'shenzhen',org:'123'}
 # 数组解构  
 > 在数组解构中，您在赋值表达式的左侧使用数组文字。数组文字上的每个变量名都映射到解构数组上同一索引处的相应项目。
 ```javascript
+const rgb = [255, 200, 0];
+
+// Array Destructuring
+const [red, green, blue] = rgb;
+
+console.log(`R: ${red}, G: ${green}, B: ${blue}`); // R: 255, G: 200, B: 0
 ```
 
 
