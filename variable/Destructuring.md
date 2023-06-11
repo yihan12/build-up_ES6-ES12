@@ -182,3 +182,15 @@ const [...rainbowClone] = rainbow;
 console.log(rainbow === rainbowClone); // false
 console.log(rainbowClone); // ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 ```
+
+# 字符串解构
+字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象
+```javascript
+const [a, b, c, d, e] = 'hello';
+a // "h"
+b // "e"
+c // "l"
+d // "l"
+e // "o"
+```
+# 函数解构
