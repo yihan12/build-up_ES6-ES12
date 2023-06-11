@@ -141,4 +141,15 @@ const [red, green, blue] = rgb;
 console.log(`R: ${red}, G: ${green}, B: ${blue}`); // R: 255, G: 200, B: 0
 ```
 
+#### 逗号可以跳过元素
+```javascript
+let [,,x] = [1,2,3,4]
+console.log(x) // 3
+```
+#### 数组点运算
+```javascript
+let [x,...y] = [1,2,3,4]
+console.log(x,y) // 1 [2,3,4]
+```
+
 
