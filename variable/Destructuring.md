@@ -167,9 +167,18 @@ for (let [key, value] of map) {
 ```javascript
 [x,y] = [y,x]
 ```
-### 数组删除元素
+#### 数组删除元素
 ```javascript
 let [first, ...rest] = ['a', 'b', 'c'];
 // first = 'a'; rest = ['b', 'c']
 ```
+#### 克隆数组
+```javascript
+const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
+// Cloning with array destructuring and spread operator
+const [...rainbowClone] = rainbow;
+
+console.log(rainbow === rainbowClone); // false
+console.log(rainbowClone); // ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+```
