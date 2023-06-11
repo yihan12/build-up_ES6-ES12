@@ -150,6 +150,26 @@ console.log(x) // 3
 ```javascript
 let [x,...y] = [1,2,3,4]
 console.log(x,y) // 1 [2,3,4]
+
+let [x, y, ...z] = ['a']; // x='a'; y=undefined; z=[]
+
+let [x, ...[y, z]] = ['a', 'b', 'c'];
+    // x = 'a'; y = 'b'; z = 'c'
 ```
 
+#### 循环
+```javascript
+for (let [key, value] of map) {
+  console.log(key + ' is ' + value);
+}
+```
+#### 交换值
+```javascript
+[x,y] = [y,x]
+```
+### 数组删除元素
+```javascript
+let [first, ...rest] = ['a', 'b', 'c'];
+// first = 'a'; rest = ['b', 'c']
+```
 
