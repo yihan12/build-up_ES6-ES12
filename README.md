@@ -21,8 +21,7 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
   * [解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md)
     * [对象解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#对象解构)
     * [数组解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#数组解构)
-    * [字符串解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#字符串解构)
-    * [函数解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#函数解构)
+    * [字符串解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#字符串解构)]
   
 * **[第二章 字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)**
   * [模板字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings#模板字符串)
