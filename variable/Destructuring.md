@@ -198,4 +198,3 @@ e // "o"
 let {length : len} = 'hello';
 len // 5
 ```
-# 函数解构
