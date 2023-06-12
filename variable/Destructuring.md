@@ -193,4 +193,9 @@ c // "l"
 d // "l"
 e // "o"
 ```
+属性解构赋值
+```javascript
+let {length : len} = 'hello';
+len // 5
+```
 # 函数解构
