@@ -21,12 +21,13 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
   * [解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md)
     * [对象解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#对象解构)
     * [数组解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#数组解构)
-    * [字符串解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#字符串解构)]
+    * [字符串解构](https://github.com/yihan12/build-up_ES6/blob/main/variable/Destructuring.md#字符串解构)
   
 * **[第二章 字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings/README.md)**
   * [模板字符串](https://github.com/yihan12/build-up_ES6/blob/main/strings#模板字符串)
   * [标签模板](https://github.com/yihan12/build-up_ES6/blob/main/strings#标签模板)
-  * [字符串新增方法](https://github.com/yihan12/build-up_ES6/blob/main/strings#字符串新增方法)
+  * [字符串新增方法](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md)
+    * [查找和匹配](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#查找和匹配)
   
 - [x] [第三章 变量的解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%89%E7%AB%A0/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC.md)  
 - [x] [第四章 数值新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%9B%9B%E7%AB%A0/%E6%95%B0%E5%80%BC.md)  
