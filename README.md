@@ -29,7 +29,9 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
   * [字符串新增方法](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md)
     * [查找和匹配](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#查找和匹配)
   
-- [x] [第三章 变量的解构赋值](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%B8%89%E7%AB%A0/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC.md)  
+* **[第三章 数值新特性]()**
+
+
 - [x] [第四章 数值新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%9B%9B%E7%AB%A0/%E6%95%B0%E5%80%BC.md)  
 - [x] [第五章 函数的默认参数、箭头函数、展开运算符、尾调用优化](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%BA%94%E7%AB%A0/%E5%87%BD%E6%95%B0.md)  
 - [x] [第六章 数组扩展运算符（Rest+Spread）、类方法、原型方法](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%85%AD%E7%AB%A0/%E6%95%B0%E7%BB%84.md)  
