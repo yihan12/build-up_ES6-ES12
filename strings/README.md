@@ -160,5 +160,3 @@ console.log(msg) // "The total is 30 (31.5 with tax)"
 
 
 
-# 字符串新增方法
-
