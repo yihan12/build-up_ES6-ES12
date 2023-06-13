@@ -108,5 +108,57 @@ console.log(tagFunc`Setting ${setting} is ${value}!`, //[['Setting ', ' is ', '!
 
 字符串的静态（固定）部分（模板字符串）与动态部分（替换）保持分离。
 
+#### hello world
+```javascript
+function tag(...e){
+  console.log(e); // [['hello world']]
+}
+tag`hello world`
+```
+从hello world中不难看出，标签模板中的字符串参数会被放在数组内。我们现在看下加入插值后会发生什么变化。
+
+#### 加入插值`${}`
+```javascript
+function tag(...e){
+  console.log(e); // [['hello world ', ""], '123']
+}
+const a = '123'
+tag`hello world ${a}`
+```
+其实tag相当于传入`tag(['hello world ', ""], '123')`
+```javascript
+function tag(...e){
+  console.log(e); // [['hello world ', ""], '123']
+}
+const a = '123'
+tag`hello world ${a}`
+
+tag(['hello world ', ""], '123') // [['hello world ', ""], '123']
+```
+
+#### 拼合
+```javascript
+let total = 30;
+let msg = passthru`The total is ${total} (${total*1.05} with tax)`;
+
+function passthru(literals) {
+  let result = '';
+  let i = 0;
+
+  while (i < literals.length) {
+    result += literals[i++];
+    if (i < arguments.length) {
+      result += arguments[i];
+    }
+  }
+
+  return result;
+}
+
+console.log(msg) // "The total is 30 (31.5 with tax)"
+```
+
+
+
 # 字符串新增方法
 
