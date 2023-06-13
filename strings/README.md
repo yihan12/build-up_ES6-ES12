@@ -89,5 +89,24 @@ console.log(output);
 # 标签模板
 > 模板字符串的功能，不仅仅是上面这些。它可以紧跟在一个函数名后面，该函数将被调用来处理这个模板字符串。这被称为“标签模板”功能（tagged template）。
 
+```javascript
+function tagFunc(...args) {
+  return args;
+}
+
+const setting = 'dark mode';
+const value = true;
+console.log(tagFunc`Setting ${setting} is ${value}!`, //[['Setting ', ' is ', '!'], 'dark mode', true]
+[['Setting ', ' is ', '!'], 'dark mode', true] )//[['Setting ', ' is ', '!'], 'dark mode', true]
+```
+第一个反引号之前的函数tagFunc称为标签函数。它的参数是：
+
+* 模板字符串（第一个参数）：一个数组，文本片段围绕插值${}。
+在示例中：['Setting '，' is ', '!']
+* 替换（剩余参数）：插值。
+在示例中：`dark mode`和`true`
+
+字符串的静态（固定）部分（模板字符串）与动态部分（替换）保持分离。
+
 # 字符串新增方法
 
