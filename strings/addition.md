@@ -86,4 +86,13 @@ console.log('\u{2764}') // ❤
 ### String.fromCodePoint
 > 此方法接收一个数字并返回一个代码点。请注意，我如何将0x前缀与我们刚才从. codePointAt获得的简洁的以16为底的代码点一起使用。
 
+```javascript
+String.fromCodePoint(0x1f40e)
+// '🐎'
+String.fromCodePoint(0x1f471)
+// '👱'
+String.fromCodePoint(0x2764)
+// '❤'
+```
+
 # 查找和匹配
