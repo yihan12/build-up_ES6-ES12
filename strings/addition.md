@@ -63,5 +63,25 @@ for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
 }
 ```
 
+点运算+map
+```javascript
+[...'\ud83d\udc0e\ud83d\udc71\u2764'].map(cp => cp.codePointAt(0))
+// [128014, 128113, 10084]
+```
+
+然后，您可以使用新的unicode代码点转义语法\u{codePoint}将这些以10为底的整数的十六进制（base-16）表示并将它们呈现在字符串上。此语法允许您表示超出“基本多语言平面”（BMP）的unicode代码点，即通常使用语法表示的[U+0000， U+FFFF]范围之外的代码点。
+```javascript
+for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
+  let a = codePoint.codePointAt(0).toString(16)
+  console.log(a)
+  // '1f40e'
+  // '1f471'
+  // '2764'
+}
+console.log('\u{1f40e}') // 🐎
+console.log('\u{1f471}') // 👱
+console.log('\u{2764}') // ❤
+```
+
 
 # 查找和匹配
