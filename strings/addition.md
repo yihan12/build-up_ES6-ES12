@@ -83,5 +83,6 @@ console.log('\u{1f471}') // 👱
 console.log('\u{2764}') // ❤
 ```
 
+### String.fromCodePoint
 
 # 查找和匹配
