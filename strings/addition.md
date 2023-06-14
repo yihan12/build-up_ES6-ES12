@@ -45,5 +45,23 @@ for (let codePoint of '🐎👱❤') {
 ```
 
 ### String.prototype.codePointAt
+> ES6 提供了codePointAt()方法，能够正确处理 4 个字节储存的字符，返回一个字符的码点。
+
+```javascript
+'\ud83d\udc0e\ud83d\udc71\u2764'.codePointAt(0)
+// 128014
+'\ud83d\udc0e\ud83d\udc71\u2764'.codePointAt(2)
+// 128113
+'\ud83d\udc0e\ud83d\udc71\u2764'.codePointAt(4)
+// 10084
+
+for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
+  console.log(codePoint.codePointAt(0))
+  // 128014
+  // 128113
+  // 10084
+}
+```
+
 
 # 查找和匹配
