@@ -44,4 +44,6 @@ for (let codePoint of '🐎👱❤') {
 [...'🐎👱❤'].length // 3
 ```
 
+## String.prototype.codePointAt
+
 # 查找和匹配
