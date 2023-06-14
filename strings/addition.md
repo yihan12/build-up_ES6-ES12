@@ -107,5 +107,11 @@ String.fromCodePoint(10084)
 
 String.fromCodePoint(128014, 128113, 10084) // '🐎👱❤'
 ```
+fromCodePoint + codePointAt
+```javascript
+String.fromCodePoint(...[
+  ...'\ud83d\udc0e\ud83d\udc71\u2764'
+].map(cp => cp.codePointAt(0))) // '🐎👱❤'
+```
 
 # 查找和匹配
