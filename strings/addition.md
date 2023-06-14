@@ -84,7 +84,7 @@ console.log('\u{2764}') // ❤
 ```
 
 ### String.fromCodePoint
-> 此方法接收一个数字并返回一个代码点。
+> ES5 提供String.fromCharCode()方法，用于从 Unicode 码点返回对应字符，但是这个方法不能识别码点大于0xFFFF的字符。 ES6 提供了String.fromCodePoint()方法，可以识别大于0xFFFF的字符，弥补了String.fromCharCode()方法的不足。
 
 请注意，我如何将0x前缀与我们刚才从. codePointAt获得的简洁的以16为底的代码点一起使用。
 
