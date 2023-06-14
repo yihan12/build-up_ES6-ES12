@@ -114,4 +114,6 @@ String.fromCodePoint(...[
 ].map(cp => cp.codePointAt(0))) // '🐎👱❤'
 ```
 
+### String.prototype.normalize
+
 # 查找和匹配
