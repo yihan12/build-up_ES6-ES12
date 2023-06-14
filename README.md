@@ -28,8 +28,8 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
   * [标签模板](https://github.com/yihan12/build-up_ES6/blob/main/strings#标签模板)
   * [字符串新增方法](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md)
     * [unicode相关方法](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#unicode相关方法)  
-      * String.prototype.codePointAt
-      * String.fromCodePoint
+      * [String.prototype.codePointAt](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#unicode相关方法) 
+      * [String.fromCodePoint](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#unicode相关方法) 
     * [查找和匹配](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#查找和匹配)
   
 * **[第三章 数值新特性]()**
