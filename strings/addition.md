@@ -140,6 +140,19 @@ compare(
   '\x6d\x61\x6e\u0303\x61\x6e\x61'
 )// true
 ```
-
+我们可以在两个字符串上使用`.noralize()`来查看它们是否真的相等。
+```javascript
+function compare (left, right) {
+  return left.normalize() === right.normalize()
+}
+compare(
+  '\x6d\x61\xf1\x61\x6e\x61',
+  '\x6d\x61\x6e\u0303\x61\x6e\x61'
+)// true
+compare(
+  '123',
+  '123'
+)// true
+```
 
 # 查找和匹配
