@@ -126,6 +126,20 @@ String.fromCodePoint(...[
 'mañana'.length
 // 7
 ```
+normalize操作这两个字符串后：
+```javascript
+'mañana'.normalize() === 'mañana'.normalize()
+
+function compare (left, right) {
+  return left.normalize() === right.normalize()
+}
+
+console.log(compare('mañana','mañana' )) // true
+compare(
+  '\x6d\x61\xf1\x61\x6e\x61',
+  '\x6d\x61\x6e\u0303\x61\x6e\x61'
+)// true
+```
 
 
 # 查找和匹配
