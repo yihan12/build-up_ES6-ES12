@@ -35,6 +35,9 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
       * [`String.prototype.startsWith`](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#原型方法)
       * [`String.prototype.endsWith`](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#原型方法)
       * [`String.prototype.includes`](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#原型方法)
+      * [`String.prototype.repeat`](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#原型方法)
+      * [`String.prototype[Symbol.iterator]`](https://github.com/yihan12/build-up_ES6/blob/main/strings/addition.md#原型方法)
+      
   
 * **[第三章 数值新特性]()**
 
