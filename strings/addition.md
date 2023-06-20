@@ -163,7 +163,7 @@ compare(
 * startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
 * endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
 
-#### String.prototype.startsWith
+### String.prototype.startsWith
 
 一个非常常见的问题是“这个字符串是否以第一个字符串开头？”
 
@@ -185,3 +185,5 @@ console.log(foo.startsWith('foo',3))// true
 console.log(foo.startsWith('foo',6))// true
 console.log(foo.startsWith('foo',5))// false
 ```
+
+### String.prototype.endsWith
