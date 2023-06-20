@@ -203,11 +203,21 @@ endsWith判断字符串是否以某段字符结尾。
 // true
 ```
 
-### String.prototype.endsWith
+### String.prototype.includes
 您可以使用.include来确定一个字符串是否包含另一个字符串。
 ```javascript
 'foofoo'.includes('foo')
 // true
 'foofoo'.includes('sf')
 // false
+```
+让我们来对比下.indexOf和.includes的使用。
+```javascript
+'foofoo'.indexOf('foo') !== -1 // true
+'foofoo'.indexOf('zas') !== -1 // false
+
+'foofoo'.includes('oo', 1) // true
+'foofoo'.includes('oo', 4) // true
+'foofoo'.includes('oo', 2) // true
+'foofoo'.includes('oo', 5) // false
 ```
