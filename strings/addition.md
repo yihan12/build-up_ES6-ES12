@@ -187,3 +187,27 @@ console.log(foo.startsWith('foo',5))// false
 ```
 
 ### String.prototype.endsWith
+endsWith判断字符串是否以某段字符结尾。
+```javascript
+'ponyfoo'.endsWith('foo') // true
+'ponyfoo'.endsWith('pony') // false
+```
+
+就像. startsWith一样，我们有一个位置索引来指示查找应该在哪里结束。它默认为字符串的长度。
+```javascript
+'ponyfoo'.endsWith('foo', 7)
+// true
+'ponyfoo'.endsWith('pony', 0)
+// false
+'ponyfoo'.endsWith('pony', 4)
+// true
+```
+
+### String.prototype.endsWith
+您可以使用.include来确定一个字符串是否包含另一个字符串。
+```javascript
+'foofoo'.includes('foo')
+// true
+'foofoo'.includes('sf')
+// false
+```
