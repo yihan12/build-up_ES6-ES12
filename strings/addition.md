@@ -162,3 +162,26 @@ compare(
 * includes()：返回布尔值，表示是否找到了参数字符串。
 * startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
 * endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
+
+#### String.prototype.startsWith
+
+一个非常常见的问题是“这个字符串是否以第一个字符串开头？”
+
+在ES5中，我们一般使用indexOf：
+```javascript
+const foo = 'foo'
+console.log(foo.indexOf('fo'))// 0
+```
+ES6的话，我们可以startsWidth来判断是否是第一个字符
+```javascript
+const foo = 'foo'
+console.log(foo.startsWith('fo'))// true
+```
+不仅可以判断是否第一个字符，我们还可以判断该字符在其他位置出现是否正确。例如
+```javascript
+const foo = 'foofoofoo'
+console.log(foo.startsWith('foo',0))// true
+console.log(foo.startsWith('foo',3))// true
+console.log(foo.startsWith('foo',6))// true
+console.log(foo.startsWith('foo',5))// false
+```
