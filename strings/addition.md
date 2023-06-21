@@ -221,3 +221,47 @@ endsWith判断字符串是否以某段字符结尾。
 'foofoo'.includes('oo', 2) // true
 'foofoo'.includes('oo', 5) // false
 ```
+
+### String.prototype.repeat
+> repeat方法返回一个新字符串，表示将原字符串重复n次。
+
+```javascript
+'na'.repeat(0)
+// ''
+'na'.repeat(1)
+// 'na'
+'na'.repeat(2)
+// 'nana'
+'na'.repeat(5)
+// 'nanananana'
+```
+
+提供的计数应该是一个正的有限数。
+```javascript
+'na'.repeat(Infinity)
+// RangeError
+'na'.repeat(-1)
+// RangeError
+```
+但是，如果参数是 0 到-1 之间的小数，则等同于 0，这是因为会先进行取整运算。0 到-1 之间的小数，取整以后等于-0，repeat视同为 0。
+```javascript
+'na'.repeat(-0.9) // ""
+```
+
+如果repeat的参数是字符串，则会先转换成数字。
+```javascript
+'na'.repeat('na')
+// ''
+'na'.repeat('3')
+// 'nanana'
+```
+
+参数NaN等同于 0。
+```javascript
+'na'.repeat(NaN) // ""
+```
+
+小数会向下取整。
+```javascript
+'na'.repeat(3.9) // 'nanana'
+```
