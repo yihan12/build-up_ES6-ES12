@@ -3,5 +3,5 @@ ES2017 引入了字符串补全长度的功能。如果某个字符串不够指�
 
 
 ### padStart & padEnd
-> padStart()用于头部补全  
-> padEnd()用于尾部补全。
+> padStart()用于头部补全（左侧）  
+> padEnd()用于尾部补全(右侧)
