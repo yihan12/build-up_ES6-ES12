@@ -1,5 +1,7 @@
 # 概览
-ES2017添加了padStart（）和padEnd（）方法，它们将空格或其他字符添加到字符串中，直到它达到特定长度。
+ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。
 
 
-### String.prototype.padStart&String.prototype.padEnd
+### padStart & padEnd
+> padStart()用于头部补全
+> padEnd()用于尾部补全。
