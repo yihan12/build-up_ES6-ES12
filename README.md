@@ -43,7 +43,7 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
       * [ES2021 `replaceAll`](https://github.com/yihan12/build-up_ES6/tree/main/strings/ES6+.md)
        
   
-* **[第三章 数值新特性]()**
+* **[第三章 数值新特性](https://github.com/yihan12/build-up_ES6-ES12/blob/main/number/README.md)**
 
 * **[第四章 数组扩展]()**
 
