@@ -4,6 +4,11 @@
 >
 > ES2020 引入了一种新的数据类型 BigInt（大整数），来解决这个问题，这是 ECMAScript 的第八种数据类型。BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示。
 
-ES5: String, Number, Boolean, Null, Undefined
-ES6 Added: Symbol, 6 types
-ES10 added: BigInt, reaching 7 types
+ES5: String, Number, Boolean, Null, Undefined  
+ES6 Added: Symbol, 6 types  
+ES10 added: BigInt, reaching 7 types  
+
+```javascript
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
+```
