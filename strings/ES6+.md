@@ -3,6 +3,8 @@ ES2017 引入了字符串补全长度的功能。如果某个字符串不够指�
 
 ES2019 对字符串实例新增了trimStart()和trimEnd()这两个方法。
 
+ES2020 增加了String.prototype.matchAll()方法，可以一次性取出所有匹配。不过，它返回的是一个遍历器（Iterator），而不是数组。
+
 ### padStart & padEnd
 > padStart()用于头部补全（左侧）  
 > padEnd()用于尾部补全(右侧)
@@ -56,3 +58,43 @@ String.prototype.trimRight.name === "trimEnd"; // true
 ```
 
 ### matchAll
+
+> 给定一个字符串和一个正则表达式，matchAll（）返回所有匹配项的匹配对象的迭代器。
+
+我们先看下match如何匹配的
+```javascript
+let string = "Hello";
+let matches = string.match(/l/);
+console.log(matches); // "l"
+['l', index: 2, input: 'Hello', groups: undefined]
+```
+带有正则表达式和 /g标志的String. match确实返回多个匹配项：
+```javascript
+let string = "Hello";
+let matches = string.match(/l/g);
+console.log(matches); // "l"
+['l', 'l']
+```
+虽然输出了多个匹配项，明显结果不一样。
+```javascript
+let iterator = "hello".matchAll(/[el]/g);
+for (const match of iterator)
+    console.log(match);
+// ['e', index: 1, input: 'hello', groups: undefined] // Iteration 1
+// ['l', index: 2, input: 'hello', groups: undefined] // Iteration 2
+// ['l', index: 3, input: 'hello', groups: undefined] // Iteration 3
+```
+
+```javascript
+const regexp = /t(e)(st(\d?))/g;
+const str = 'test1test2';
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+
+```
