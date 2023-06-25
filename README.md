@@ -39,6 +39,7 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
     * [ES6+](https://github.com/yihan12/build-up_ES6/tree/main/strings/ES6+.md)
       * [ES2017 `padStart` & `padEnd`](https://github.com/yihan12/build-up_ES6/tree/main/strings/ES6+.md)
       * [ES2019 `trimStart` & `trimEnd`](https://github.com/yihan12/build-up_ES6/tree/main/strings/ES6+.md)
+      * [ES2020 `matchAll`](https://github.com/yihan12/build-up_ES6/tree/main/strings/ES6+.md)
        
   
 * **[第三章 数值新特性]()**
