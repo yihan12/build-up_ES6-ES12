@@ -48,4 +48,11 @@ console.log(mySample.trimEnd());
 ```
 
 除了空格键，这两个方法对字符串头部（或尾部）的 tab 键、换行符等不可见的空白符号也有效。  
+
 浏览器还部署了额外的两个方法，trimLeft()是trimStart()的别名，trimRight()是trimEnd()的别名。
+```javascript
+String.prototype.trimLeft.name === "trimStart"; // true
+String.prototype.trimRight.name === "trimEnd"; // true
+```
+
+### matchAll
