@@ -5,6 +5,8 @@ ES2019 对字符串实例新增了trimStart()和trimEnd()这两个方法。
 
 ES2020 增加了String.prototype.matchAll()方法，可以一次性取出所有匹配。不过，它返回的是一个遍历器（Iterator），而不是数组。
 
+ES2021 引入了replaceAll()方法，可以一次性替换所有匹配。
+
 ### padStart & padEnd
 > padStart()用于头部补全（左侧）  
 > padEnd()用于尾部补全(右侧)
@@ -98,3 +100,14 @@ console.log(array[1]);
 // Expected output: Array ["test2", "e", "st2", "2"]
 
 ```
+
+### replaceAll
+
+> replace eAll（）方法返回一个新字符串，其中模式的所有匹配项都被替换。该模式可以是字符串或RegExp，替换可以是字符串或要为每个匹配项调用的函数。原始字符串保持不变。
+
+```javascript
+let str = 'aabbcc'
+let newStr = str.replaceAll('b', '_')
+console.log(str, newStr); // 'aabbcc' 'aa__cc'
+```
+上面代码不难看出：replaceAll操作字符串后，原始字符串保持不变。
