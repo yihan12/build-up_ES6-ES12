@@ -48,7 +48,7 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
   * [Math对象扩展](https://github.com/yihan12/build-up_ES6-ES12/blob/main/number#Math对象扩展)
   * [二进制和八进制表示法](https://github.com/yihan12/build-up_ES6-ES12/blob/main/number#二进制和八进制表示法)
   * [数值新增方法](https://github.com/yihan12/build-up_ES6-ES12/blob/main/number/addition.md)
-  
+ 
 
 * **[第四章 数组扩展](https://github.com/yihan12/build-up_ES6-ES12/blob/main/array/README.md)**
 
