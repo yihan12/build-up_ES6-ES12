@@ -112,7 +112,21 @@ console.log(str, newStr); // 'aabbcc' 'aa__cc'
 ```
 上面代码不难看出：replaceAll操作字符串后，原始字符串保持不变。
 
+和replace替换空字符串对比
 ```javascript
 "xxx".replaceAll("", "_"); // "_x_x_x_"
 "xxx".replace("", "_"); // "_xxx"
 ```
+
+非全局正则表达式报错
+```javascript
+// 不报错
+'aabbcc'.replace(/b/, '_')
+
+// 不报错
+'aabbcc'.replaceAll(/b/g, '_')
+
+// 报错
+'aabbcc'.replaceAll(/b/, '_')
+```
+
