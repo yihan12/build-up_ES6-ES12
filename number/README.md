@@ -3,7 +3,7 @@
 > JavaScript 所有数字都保存成 64 位浮点数，这给数值的表示带来了两大限制。一是数值的精度只能到 53 个二进制位（相当于 16 个十进制位），大于这个范围的整数，JavaScript 是无法精确表示，这使得 JavaScript 不适合进行科学和金融方面的精确计算。二是大于或等于2的1024次方的数值，JavaScript 无法表示，会返回Infinity。  
 >
 > ES2020 引入了一种新的数据类型 BigInt（大整数），来解决这个问题，这是 ECMAScript 的第八种数据类型。BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示。
-
+### BigInt类型
 ES5: String, Number, Boolean, Null, Undefined  
 ES6 Added: Symbol, 6 types  
 ES10 added: BigInt, reaching 7 types  
@@ -12,6 +12,8 @@ ES10 added: BigInt, reaching 7 types
 typeof 1n === "bigint"; // true
 typeof BigInt("1") === "bigint"; // true
 ```
+### BigInt & Number
+
 过去，不支持大于9007199254740992的整数值。如果超过，该值将简单地锁定为MAX_SAFE_INTEGER+1：
 
 ```javascript
@@ -34,6 +36,24 @@ const largerStr2 = BigInt('9007199254740993')
 console.log(largerNum, largerNum2, largerStr, largerStr2); // 9007199254740992n 9007199254740992n 9007199254740992n 9007199254740993n
 console.log(largerNum === largerStr, largerNum == largerStr, largerNum2===largerStr) // true true true
 ```
+那么看看`0n`&`0`,`1n`&`1`对比如何
+```javascript
+console.log(1n === 1, 1n == 1);  // false true
+console.log(0n === 0, 0n == 0);  // false true
+```
+从上面式子不能看出BigInt值并不严格等于Number值。也就是不全等。
+
+那两者的大小比较又会如何
+```javascript
+1n < 2; // true
+2n > 1; // true
+2 > 2; // false
+2n > 2; // false
+2n >= 2; // true
+```
+
+### BigInt计算
+
 我们再来看看MDN的示例，发现 `+ * - % **` 这些运算符都支持
 ```javascript
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
