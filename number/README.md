@@ -21,11 +21,12 @@ console.log(limit+1); // 9007199254740992
 console.log(limit+2); // 9007199254740992
 console.log(9007199254740993) // 9007199254740992
 ```
-然后我们看看BigInt
+然后我们看看BigInt，BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示。
 ```javascript
 const larger = 9007199254740993n;
 console.log(larger); // 9007199254740993n
 console.log(larger + 1n); // 9007199254740994n
+console.log(larger*1000n); // 9007199254740993000n
 const largerNum = BigInt(9007199254740992)
 const largerNum2 = BigInt(9007199254740993)
 const largerStr = BigInt('9007199254740992')
