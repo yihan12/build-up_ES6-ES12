@@ -124,7 +124,7 @@ BigInt('1.5') // SyntaxError
 
 BigInt 继承了 Object 对象的两个实例方法。  
 
--- BigInt.prototype.toString()
+-- BigInt.prototype.toString()  
 -- BigInt.prototype.valueOf()  
 
 它还继承了 Number 对象的一个实例方法。  
@@ -136,3 +136,25 @@ BigInt 继承了 Object 对象的两个实例方法。
 -- BigInt.asUintN(width, BigInt)： 给定的 BigInt 转为 0 到 2width - 1 之间对应的值。  
 -- BigInt.asIntN(width, BigInt)：给定的 BigInt 转为 -2width - 1 到 2width - 1 - 1 之间对应的值。  
 -- BigInt.parseInt(string[, radix])：近似于Number.parseInt()，将一个字符串转换成指定进制的 BigInt。  
+
+```javascript
+const max = 2n ** (64n - 1n) - 1n;
+
+BigInt.asIntN(64, max)
+// 9223372036854775807n
+BigInt.asIntN(64, max + 1n)
+// -9223372036854775808n
+BigInt.asUintN(64, max + 1n)
+// 9223372036854775808n
+
+const max2 = 2n ** (64n - 1n) - 1n;
+
+BigInt.asIntN(32, max2) // -1n
+BigInt.asUintN(32, max2) // 4294967295n
+
+// Number.parseInt() 与 BigInt.parseInt() 的对比
+Number.parseInt('9007199254740993', 10)
+// 9007199254740992
+BigInt.parseInt('9007199254740993', 10)
+// 9007199254740993n
+```
