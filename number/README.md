@@ -89,3 +89,10 @@ const truncated = 5n / 2n;
 // 2n, not 2.5n
 console.log(expected, truncated); // 2n 2n
 ```
+### BigInt 正负号
+
+BigInt 可以使用负号（-），但是不能使用正号（+），因为会与 asm.js 冲突。
+```javascript
+-42n // 正确
++42n // 报错
+```
