@@ -12,3 +12,24 @@ ES10 added: BigInt, reaching 7 types
 typeof 1n === "bigint"; // true
 typeof BigInt("1") === "bigint"; // true
 ```
+过去，不支持大于9007199254740992的整数值。如果超过，该值将简单地锁定为MAX_SAFE_INTEGER+1：
+
+```javascript
+const limit = Number.MAX_SAFE_INTEGER;
+console.log(limit); // 9007199254740991
+console.log(limit+1); // 9007199254740992
+console.log(limit+2); // 9007199254740992
+console.log(9007199254740993) // 9007199254740992
+```
+然后我们看看BigInt
+```javascript
+const larger = 9007199254740993n;
+console.log(larger); // 9007199254740993n
+console.log(larger + 1n); // 9007199254740994n
+const largerNum = BigInt(9007199254740992)
+const largerNum2 = BigInt(9007199254740993)
+const largerStr = BigInt('9007199254740992')
+const largerStr2 = BigInt('9007199254740993')
+console.log(largerNum, largerNum2, largerStr, largerStr2); // 9007199254740992n 9007199254740992n 9007199254740992n 9007199254740993n
+console.log(largerNum === largerStr, largerNum == largerStr, largerNum2===largerStr) // true true true
+```
