@@ -60,3 +60,12 @@ const bigN = 2n ** 54n;
 bigN * -1n;
 // -18014398509481984n
 ```
+但是对于除法`/`和数字计算有些区别：
+```javascript
+const expected = 4n / 2n;
+// 2n
+
+const truncated = 5n / 2n;
+// 2n, not 2.5n
+console.log(expected, truncated); // 2n 2n
+```
