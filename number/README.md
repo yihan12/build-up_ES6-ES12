@@ -130,6 +130,22 @@ BigInt 继承了 Object 对象的两个实例方法。
 它还继承了 Number 对象的一个实例方法。  
 
 -- `BigInt.prototype.toLocaleString()`
+```javascript
+console.log(typeof Object(1n)); // "object"
+console.log(typeof Object(1n).valueOf()); // "bigint"
+
+console.log(1024n.toString());//"1024"
+console.log(1024n.toString(2));//"10000000000"
+console.log(1024n.toString(16));//"400"
+
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString('de-DE'));//"123.456.789.123.456.789"
+
+// Request a currency format
+console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));//  "123.456.789.123.456.789,00 €"
+```
 
 此外，还提供了三个静态方法。  
 
@@ -158,3 +174,5 @@ Number.parseInt('9007199254740993', 10)
 BigInt.parseInt('9007199254740993', 10)
 // 9007199254740993n
 ```
+
+
