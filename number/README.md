@@ -96,3 +96,40 @@ BigInt 可以使用负号（-），但是不能使用正号（+），因为会�
 -42n // 正确
 +42n // 报错
 ```
+
+### BigInt函数
+JavaScript 原生提供BigInt函数，可以用它生成 BigInt 类型的数值。转换规则基本与Number()一致，将其他类型的值转为 BigInt。
+```javascript
+BigInt(123) // 123n
+BigInt('123') // 123n
+BigInt(false) // 0n
+BigInt(true) // 1n
+```
+BigInt()函数必须有参数，而且参数必须可以正常转为数值，下面的用法都会报错。
+```javascript
+new BigInt() // TypeError
+BigInt(undefined) //TypeError
+BigInt(null) // TypeError
+BigInt('123n') // SyntaxError
+BigInt('abc') // SyntaxError
+```
+
+需要注意的是，BigInt函数无法操作小数以及小数字符串
+```javascript
+console.log(BigInt(123)); // 123n
+BigInt(123.3); // RangeError: The number 123.3 cannot be converted to a BigInt because it is not an integer
+BigInt(1.5) // RangeError
+BigInt('1.5') // SyntaxError
+```
+BigInt 继承了 Object 对象的两个实例方法。
+
+- BigInt.prototype.toString()
+- BigInt.prototype.valueOf()
+它还继承了 Number 对象的一个实例方法。
+
+- BigInt.prototype.toLocaleString()
+此外，还提供了三个静态方法。
+
+- BigInt.asUintN(width, BigInt)： 给定的 BigInt 转为 0 到 2width - 1 之间对应的值。
+- BigInt.asIntN(width, BigInt)：给定的 BigInt 转为 -2width - 1 到 2width - 1 - 1 之间对应的值。
+- BigInt.parseInt(string[, radix])：近似于Number.parseInt()，将一个字符串转换成指定进制的 BigInt。
