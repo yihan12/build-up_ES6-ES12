@@ -34,3 +34,29 @@ const largerStr2 = BigInt('9007199254740993')
 console.log(largerNum, largerNum2, largerStr, largerStr2); // 9007199254740992n 9007199254740992n 9007199254740992n 9007199254740993n
 console.log(largerNum === largerStr, largerNum == largerStr, largerNum2===largerStr) // true true true
 ```
+我们再来看看MDN的示例，发现 `+ * - % **` 这些运算符都支持
+```javascript
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
+// 9007199254740991n
+
+const maxPlusOne = previousMaxSafe + 1n;
+// 9007199254740992n
+
+const theFuture = previousMaxSafe + 2n;
+// 9007199254740993n, this works now!
+
+const multi = previousMaxSafe * 2n;
+// 18014398509481982n
+
+const subtr = multi - 10n;
+// 18014398509481972n
+
+const mod = multi % 10n;
+// 2n
+
+const bigN = 2n ** 54n;
+// 18014398509481984n
+
+bigN * -1n;
+// -18014398509481984n
+```
