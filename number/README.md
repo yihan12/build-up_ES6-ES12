@@ -121,14 +121,14 @@ BigInt(123.3); // RangeError: The number 123.3 cannot be converted to a BigInt b
 BigInt(1.5) // RangeError
 BigInt('1.5') // SyntaxError
 ```
-BigInt 继承了 Object 对象的两个实例方法。
+BigInt 继承了 Object 对象的两个实例方法。  
 
 - BigInt.prototype.toString()
 - BigInt.prototype.valueOf()
-它还继承了 Number 对象的一个实例方法。
+它还继承了 Number 对象的一个实例方法。  
 
 - BigInt.prototype.toLocaleString()
-此外，还提供了三个静态方法。
+此外，还提供了三个静态方法。  
 
 - BigInt.asUintN(width, BigInt)： 给定的 BigInt 转为 0 到 2width - 1 之间对应的值。
 - BigInt.asIntN(width, BigInt)：给定的 BigInt 转为 -2width - 1 到 2width - 1 - 1 之间对应的值。
