@@ -179,7 +179,7 @@ BigInt.parseInt('9007199254740993', 10)
 
 > ES6 在 Math 对象上新增了 17 个与数学相关的方法。所有这些方法都是静态方法，只能在 Math 对象上调用。
 
-### Math.trunc
+### Math.trunc()
 
 > Math.trunc（）静态方法通过删除任何小数返回数字的整数部分。
 
@@ -211,4 +211,37 @@ Math.trunc(undefined) // NaN
 ```javascript
 Math.trunc(-Infinity); // -Infinity
 Math.trunc(Infinity); // Infinity
+```
+
+### Math.sign()
+> Math.sign方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。
+
+它会返回五种值。
+
+* 参数为正数，返回+1；
+* 参数为负数，返回-1；
+* 参数为 0，返回0；
+* 参数为-0，返回-0;
+* 其他值，返回NaN。
+
+```javascript
+Math.sign(3); // 1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); // 0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
+```
+如果参数是非数值，会自动转为数值。对于那些无法转为数值的值，会返回NaN。
+```javascript
+Math.sign('')  // 0
+Math.sign(true)  // +1
+Math.sign(false)  // 0
+Math.sign(null)  // 0
+Math.sign('9')  // +1
+Math.sign('foo')  // NaN
+Math.sign()  // NaN
+Math.sign(undefined)  // NaN
 ```
