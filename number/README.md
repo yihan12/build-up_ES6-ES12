@@ -178,3 +178,17 @@ BigInt.parseInt('9007199254740993', 10)
 # Math对象扩展
 
 > ES6 在 Math 对象上新增了 17 个与数学相关的方法。所有这些方法都是静态方法，只能在 Math 对象上调用。
+
+### Math.trunc
+
+> Math.trunc（）静态方法通过删除任何小数返回数字的整数部分。
+
+```javascript
+console.log(Math.trunc(13.37));//13
+
+console.log(Math.trunc(42.84));//42
+
+console.log(Math.trunc(0.123));//0
+
+console.log(Math.trunc(-0.123));// -0
+```
