@@ -192,13 +192,23 @@ console.log(Math.trunc(0.123));//0
 
 console.log(Math.trunc(-0.123));// -0
 
+console.log(Math.trunc("-1.123")); // -1
+```
+一些特殊的，但是能转成数值的处理
+```javascript
+Math.trunc(true) //1
+Math.trunc(false) // 0
+Math.trunc(null) // 0
+```
+对于空值和无法截取整数的值，返回NaN。
+```javascript
+Math.trunc(NaN);      // NaN
+Math.trunc('foo');    // NaN
+Math.trunc();         // NaN
+Math.trunc(undefined) // NaN
+```
+处理`Infinity/-Infinity`，返回原值。
+```javascript
 Math.trunc(-Infinity); // -Infinity
-Math.trunc("-1.123"); // -1
-Math.trunc(-0.123); // -0
-Math.trunc(-0); // -0
-Math.trunc(0); // 0
-Math.trunc(0.123); // 0
-Math.trunc(13.37); // 13
-Math.trunc(42.84); // 42
 Math.trunc(Infinity); // Infinity
 ```
