@@ -292,3 +292,6 @@ Math.cbrt('hello') // NaN
 * `Math.asinh(x)` 返回x的反双曲正弦（inverse hyperbolic sine）
 * `Math.acosh(x)` 返回x的反双曲余弦（inverse hyperbolic cosine）
 * `Math.atanh(x)` 返回x的反双曲正切（inverse hyperbolic tangent）
+
+# 二进制和八进制表示法
+> ES6 提供了二进制和八进制数值的新的写法，分别用前缀0b（或0B）和0o（或0O）表示。
