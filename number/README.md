@@ -259,3 +259,17 @@ Math.hypot(3, 4, 'foo'); // NaN
 Math.hypot(3, 4, '5');   // 7.0710678118654755
 Math.hypot(-3);          // 3
 ```
+### Math.cbrt()
+> Math.cbrt()方法用于计算一个数的立方根。
+
+```javascript
+Math.cbrt(-1) // -1
+Math.cbrt(0)  // 0
+Math.cbrt(1)  // 1
+Math.cbrt(2)  // 1.2599210498948732
+```
+对于非数值，Math.cbrt()方法内部也是先使用Number()方法将其转为数值。
+```javascript
+Math.cbrt('8') // 2
+Math.cbrt('hello') // NaN
+```
