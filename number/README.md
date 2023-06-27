@@ -191,4 +191,14 @@ console.log(Math.trunc(42.84));//42
 console.log(Math.trunc(0.123));//0
 
 console.log(Math.trunc(-0.123));// -0
+
+Math.trunc(-Infinity); // -Infinity
+Math.trunc("-1.123"); // -1
+Math.trunc(-0.123); // -0
+Math.trunc(-0); // -0
+Math.trunc(0); // 0
+Math.trunc(0.123); // 0
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(Infinity); // Infinity
 ```
