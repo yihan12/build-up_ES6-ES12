@@ -9,6 +9,8 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
 
 2015年6月，ECMAScript的第6个版本推出，这是我们称之为ES2015或ES6的javascript的最大转变。学习ES6很重要，因为一个原因是它使JavaScript更好、更易于编写，而且ES6还与当今的现代Web技术（如React、Vue、Node. js等）一起使用。
 
+新的语言特性涵盖范围甚广，小到受欢迎的语法糖，例如箭头函数（arrow functions）和简单的字符串插值（string interpolation），大到烧脑的新概念，例如代理（proxies）和生成器（generators）。
+
 下面是ES6的一些笔记，如果对ES6的知识有所吸收，希望点下star。
 
 * **[第一章 变量](https://github.com/yihan12/build-up_ES6/blob/main/variable/README.md)**
