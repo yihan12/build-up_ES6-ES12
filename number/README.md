@@ -307,3 +307,29 @@ parseInt('101', 2) //5
 0B111110111 === 503 // true
 0O767 === 503 // true
 ```
+
+ES6延续了对以10为底的数字之外的数字文字表示方式的更改/变化。现在有了官方的八进制形式、修正的十六进制形式和全新的二进制形式。
+```javascript
+let dec = 42,
+    oct = 0o52,         // or `0O52` 
+    hex = 0x2a,         // or `0X2a` 
+    bin = 0b101010;     // or `0B101010` 
+```
+
+用Number处理这些字符串类型会被转化成字符串形式，
+```javascript
+Number( "42" );         // 42
+Number( "0o52" );       // 42
+Number( "0x2a" );       // 42
+Number( "0b101010" );   // 42
+```
+
+那么反过来处理会如何显示：
+```javascript
+const a = 42;
+
+a.toString();           // "42" -- also `a.toString( 10 )`
+a.toString( 8 );        // "52"
+a.toString( 16 );       // "2a"
+a.toString( 2 );        // "101010"
+```
