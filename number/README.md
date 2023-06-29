@@ -294,9 +294,16 @@ Math.cbrt('hello') // NaN
 * `Math.atanh(x)` 返回x的反双曲正切（inverse hyperbolic tangent）
 
 # 二进制和八进制表示法
-> ES6 提供了二进制和八进制数值的新的写法，分别用前缀0b（或0B）和0o（或0O）表示。
 
 在ES6之前，对于整数的二进制表示，您最好的选择是将它们传递给基数为2的parseInt。
 ```javascript
 parseInt('101', 2) //5
+```
+
+> ES6 提供了二进制和八进制数值的新的写法，分别用前缀0b（或0B）和0o（或0O）表示。
+```javascript
+0b111110111 === 503 // true
+0o767 === 503 // true
+0B111110111 === 503 // true
+0O767 === 503 // true
 ```
