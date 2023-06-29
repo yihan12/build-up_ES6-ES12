@@ -363,7 +363,9 @@ _1464301
 除了十进制，其他进制的数值也可以使用分隔符。
 ```javascript
 console.log(0b10_0) // 4
+console.log(0B10_0) // 4
 console.log(0o10_0) // 64
+console.log(0O10_0) // 64
 console.log(0x10_0) // 256
 ```
 
