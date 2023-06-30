@@ -15,3 +15,7 @@ Number.MIN_SAFE_INTEGER === -Number.MAX_SAFE_INTEGER
 Number.MIN_SAFE_INTEGER === -9007199254740991
 // true
 ```
+
+### Number.isNaN
+
+> Number.isNaN()用来检查一个值是否为NaN。如果参数类型不是NaN，Number.isNaN一律返回false。
