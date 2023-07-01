@@ -19,3 +19,13 @@ Number.MIN_SAFE_INTEGER === -9007199254740991
 ### Number.isNaN
 
 > Number.isNaN()用来检查一个值是否为NaN。如果参数类型不是NaN，Number.isNaN一律返回false。
+
+```javascript
+Number.isNaN(NaN) // true
+Number.isNaN(15) // false
+Number.isNaN('15') // false
+Number.isNaN(true) // false
+Number.isNaN(9/NaN) // true
+Number.isNaN('true' / 0) // true
+Number.isNaN('true' / 'true') // true
+```
