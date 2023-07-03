@@ -57,3 +57,9 @@ Number.isNaN(9/NaN) // true
 Number.isNaN('true' / 0) // true
 Number.isNaN('true' / 'true') // true
 ```
+而ES5的isNaN方法，首先转换通过Number传递给它的值。下面的示例产生不一致的结果
+```javascript
+isNaN('ponyfoo') // true
+
+isNaN(new Date())// false
+```
