@@ -67,3 +67,21 @@ isNaN(new Date())// false
 isNaN()和Number.isNaN()区别：  
 
 - `isNaN(value)` 是判断Number（value）转换后的值是否为NaN;`Number.isNaN(value)`是判断value。
+
+我们可以通过Number.isNaN()来判断value是否为数字类型
+```javascript
+function isNumber (value) {
+  return typeof value === 'number' && !Number.isNaN(value)
+}
+
+isNumber(1)
+// <- true
+isNumber(Infinity)
+// <- true
+isNumber(NaN)
+// <- false
+isNumber('ponyfoo')
+// <- false
+isNumber(new Date())
+// <- false
+```
