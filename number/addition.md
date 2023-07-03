@@ -63,3 +63,7 @@ isNaN('ponyfoo') // true
 
 isNaN(new Date())// false
 ```
+
+isNaN()和Number.isNaN()区别：  
+
+- `isNaN(value)` 是判断Number（value）转换后的值是否为NaN;`Number.isNaN(value)`是判断value。
