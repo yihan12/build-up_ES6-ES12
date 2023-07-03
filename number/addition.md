@@ -74,14 +74,9 @@ function isNumber (value) {
   return typeof value === 'number' && !Number.isNaN(value)
 }
 
-isNumber(1)
-// <- true
-isNumber(Infinity)
-// <- true
-isNumber(NaN)
-// <- false
-isNumber('ponyfoo')
-// <- false
-isNumber(new Date())
-// <- false
+isNumber(1)// true
+isNumber(Infinity)// true
+isNumber(NaN)// false
+isNumber('ponyfoo')// false
+isNumber(new Date())// false
 ```
