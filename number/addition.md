@@ -92,3 +92,15 @@ isFinite(null) // true, because Number(null) is 0
 isFinite('10') // true, because Number('10') is 10
 ```
 
+> Number.isFinite()用来检查一个数值是否为有限的（finite），即不是Infinity。
+
+```javascript
+Number.isFinite(15); // true
+Number.isFinite(0.8); // true
+Number.isFinite(NaN); // false
+Number.isFinite(Infinity); // false
+Number.isFinite(-Infinity); // false
+Number.isFinite('foo'); // false
+Number.isFinite('15'); // false
+Number.isFinite(true); // false
+```
