@@ -80,3 +80,5 @@ isNumber(NaN)// false
 isNumber('ponyfoo')// false
 isNumber(new Date())// false
 ```
+
+### `Number.isFinite`
