@@ -82,3 +82,13 @@ isNumber(new Date())// false
 ```
 
 ### `Number.isFinite`
+
+我们先看看`isFinite`的示例：
+```javascript
+isFinite(NaN) // false
+isFinite(Infinity) // false
+isFinite(-Infinity) // false
+isFinite(null) // true, because Number(null) is 0
+isFinite('10') // true, because Number('10') is 10
+```
+
