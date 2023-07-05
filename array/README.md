@@ -11,3 +11,7 @@ console.log(1, ...[2, 3, 4], 5)
 [...document.querySelectorAll('div')]
 // [<div>, <div>, <div>]
 ```
+
+# 静态方法
+- `Array.of`:
+- `Array.from`:
