@@ -17,6 +17,8 @@ console.log(1, ...[2, 3, 4], 5)
 - `Array.from`: 用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
 
 ### Array.of
+
+####  `Array.of` & `Array`
 Array()传入数字会生成空的长度为3的数组。Array.of()不仅可以将某个数值变为数组，也可以将一组值变为数组。我们通过下面的代码看看他们的区别
 ```javascript
 const a = Array( 3 );
@@ -43,3 +45,57 @@ Array.of(undefined) // [undefined]
 Array.of(1) // [1]
 Array.of(1, 2) // [1, 2]
 ```
+#### `Array.of` & `Array.prototype.slice.call`
+Array.of和下面of的方法处理类似。
+```javascript
+function of () {
+  return Array.prototype.slice.call(arguments)
+}
+
+// 也可以这么写
+function ArrayOf(){
+  return [].slice.call(arguments);
+}
+```
+但是你能直接用`Array.prototype.slice.call`直接替换，他们处理参数有很大区别
+```javascript
+Array.prototype.slice.call([1, 2, 3]) // [1, 2, 3]
+Array.of(1, 2, 3) // [1, 2, 3]
+```
+
+#### `Array.of` & `new Array`
+
+我们先看看`new Array`如何生成数组，
+```javascript
+new Array()
+// []
+new Array(undefined)
+// [undefined]
+new Array(1)
+// [undefined x 1]
+new Array(3)
+// [undefined x 3]
+new Array(1, 2)
+// [1, 2]
+new Array(-1)
+// RangeError: Invalid array length
+```
+
+`Array.of`很好的解决了特殊长度-1的问题。
+```javascript
+Array.of()
+// []
+Array.of(undefined)
+// [undefined]
+Array.of(1)
+// [1]
+Array.of(3)
+// [3]
+Array.of(1, 2)
+// [1, 2]
+Array.of(-1)
+// [-1]
+```
+
+### Array.from
+
