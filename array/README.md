@@ -112,5 +112,5 @@ const arrLike = {
 };
 
 const arr = Array.prototype.slice.call( arrLike );
-console.log(arr) // ['foo', 'bar', empty]
+console.log(arr) // ['foo', 'bar', empty] 虽然浏览器显示的empty,但实际是没有第三个值的，长度为3，第三个值打印出来会是undefined
 ```
