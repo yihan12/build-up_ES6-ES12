@@ -99,3 +99,18 @@ Array.of(-1)
 
 ### Array.from
 
+> Array.from()方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
+
+JavaScript中的“类数组对象”是一个具有长度属性的对象，特别是整数值为零或更高的对象。  
+在ES6之前我们需要这样转化成数组
+```javascript
+// array-like object类似数组的对象，含有length属性
+const arrLike = {
+    length: 3,
+    0: "foo",
+    1: "bar"
+};
+
+const arr = Array.prototype.slice.call( arrLike );
+console.log(arr) // ['foo', 'bar', empty]
+```
