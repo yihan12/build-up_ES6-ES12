@@ -141,3 +141,39 @@ const arr2 = Array.from(arr)
 arr2.push(2)
 console.log(arr,arr2); // ['foo', 'bar', undefined] ['foo', 'bar', undefined, 2]
 ```
+
+`Array.from` 可以传三个参数，第一个参数可以是类数组（）或可遍历对象（）。第二个参数是函数。如果map()函数里面用到了this关键字，还可以传入Array.from()的第三个参数，用来绑定this。
+```javascript
+Array.from(arrayLike)
+Array.from(arrayLike, mapFn)
+Array.from(arrayLike, mapFn, thisArg)
+```
+第二个参数是函数，类似于操作map遍历操作内部数据。
+```javascript
+Array.from({ length: 3 }); // [ undefined, undefined, undefined ]
+
+Array.from(arrayLike, x => x * x);
+// 等同于
+Array.from(arrayLike).map(x => x * x);
+
+Array.from([1, 2, 3], (x) => x * x)
+// [1, 4, 9]
+
+Array.from([1, , 2, , 3], (n) => n || 0)
+// [1, 0, 2, 0, 3]
+```
+
+只要是部署了 Iterator 接口的数据结构，Array.from()都能将其转为数组。
+```javascript
+Array.from('hello')
+// ['h', 'e', 'l', 'l', 'o']
+
+let namesSet = new Set(['a', 'b'])
+Array.from(namesSet) // ['a', 'b']
+
+
+```
+
+
+
+
