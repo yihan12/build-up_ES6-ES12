@@ -193,3 +193,7 @@ Array.from( { length: 4 } ) // [undefined, undefined, undefined, undefined]
 Array.from( { length: 4 } ,v=>v=1) // [1, 1, 1, 1]
 ```
 
+# 原型方法
+
+### copyWithin
+
