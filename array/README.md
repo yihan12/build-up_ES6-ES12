@@ -187,5 +187,9 @@ const b = Array.apply( null, { length: 4 } );     // four `undefined` values
 const c = Array.from( { length: 4 } );            // four `undefined` values
 console.log(a,b,c); // [empty × 4] [undefined, undefined, undefined, undefined] [undefined, undefined, undefined, undefined]
 ```
-
+由于空位的处理规则非常不统一，所以建议避免出现空位。尽量让空位内有值undefined。
+```javascript
+Array.from( { length: 4 } ) // [undefined, undefined, undefined, undefined]
+Array.from( { length: 4 } ,v=>v=1) // [1, 1, 1, 1]
+```
 
