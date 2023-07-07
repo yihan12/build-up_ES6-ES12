@@ -171,7 +171,12 @@ Array.from('hello')
 let namesSet = new Set(['a', 'b'])
 Array.from(namesSet) // ['a', 'b']
 
-
+let nameMap = new Map([
+  [1,'one'],
+  [2,'two'],
+  [3,'three']
+]);
+console.log(Array.from(nameMap)) //   [[1,'one'],[2,'two'],[3,'three']]
 ```
 
 
