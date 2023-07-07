@@ -114,3 +114,16 @@ const arrLike = {
 const arr = Array.prototype.slice.call( arrLike );
 console.log(arr) // ['foo', 'bar', empty] 虽然浏览器显示的empty,但实际是没有第三个值的，长度为3，第三个值打印出来会是undefined
 ```
+slice()可以用作复制数组
+```
+const arrLike = {
+    length: 3,
+    0: "foo",
+    1: "bar"
+};
+
+const arr = Array.prototype.slice.call( arrLike );
+const arr2 = arr.slice()
+arr2.push(2)
+console.log(arr,arr2); // ['foo', 'bar', empty] ['foo', 'bar', empty, 2]
+```
