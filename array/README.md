@@ -179,6 +179,13 @@ let nameMap = new Map([
 console.log(Array.from(nameMap)) //   [[1,'one'],[2,'two'],[3,'three']]
 ```
 
+利用`Array.from`创建四个空值
+```javascript
+const a = Array( 4 );                             // four empty slots!
 
+const b = Array.apply( null, { length: 4 } );     // four `undefined` values
+const c = Array.from( { length: 4 } );            // four `undefined` values
+console.log(a,b,c); // [empty × 4] [undefined, undefined, undefined, undefined] [undefined, undefined, undefined, undefined]
+```
 
 
