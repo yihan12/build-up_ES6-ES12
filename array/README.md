@@ -115,7 +115,7 @@ const arr = Array.prototype.slice.call( arrLike );
 console.log(arr) // ['foo', 'bar', empty] 虽然浏览器显示的empty,但实际是没有第三个值的，长度为3，第三个值打印出来会是undefined
 ```
 slice()可以用作复制数组
-```
+```javascript
 const arrLike = {
     length: 3,
     0: "foo",
@@ -126,4 +126,18 @@ const arr = Array.prototype.slice.call( arrLike );
 const arr2 = arr.slice()
 arr2.push(2)
 console.log(arr,arr2); // ['foo', 'bar', empty] ['foo', 'bar', empty, 2]
+```
+
+而用ES6的Array.from来操作转换数组和复制的操作，更加优雅简洁。
+```javascript
+const arrLike = {
+    length: 3,
+    0: "foo",
+    1: "bar"
+};
+
+const arr = Array.from(arrLike)
+const arr2 = Array.from(arr)
+arr2.push(2)
+console.log(arr,arr2); // ['foo', 'bar', undefined] ['foo', 'bar', undefined, 2]
 ```
