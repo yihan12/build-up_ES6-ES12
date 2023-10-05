@@ -83,6 +83,7 @@ JavaScript是目前世界上最常用的编程语言之一，被用于不同的�
     * [`Array.from`](https://github.com/yihan12/build-up_ES6-ES12/blob/main/array#静态方法)
   * [原型方法](https://github.com/yihan12/build-up_ES6-ES12/blob/main/array#原型方法)
     * [`Array.prototype.copyWithin`](https://github.com/yihan12/build-up_ES6-ES12/blob/main/array#原型方法)
+    * []()
 
 - [x] [第四章 数值新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%9B%9B%E7%AB%A0/%E6%95%B0%E5%80%BC.md)  
 - [x] [第五章 函数的默认参数、箭头函数、展开运算符、尾调用优化](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E4%BA%94%E7%AB%A0/%E5%87%BD%E6%95%B0.md)  
