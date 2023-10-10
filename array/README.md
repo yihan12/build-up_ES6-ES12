@@ -221,4 +221,18 @@ var items = [1, 2, 3, ,,,,,,,]
 items.copyWithin(6, 2, 3) // [1, 2, 3, empty × 3, 3, empty × 3]
 ```
 
-
+当参数为负值，如何操作的。
+```javascript
+[1, 2, 3, ,,,,,,,].copyWithin(-3, 1)
+// <- [1, 2, 3, undefined x 4, 2, 3, undefined x 1]
+copyWithin([1, 2, 3, ,,,,,,,], -3, 1)
+// <- [1, 2, 3, undefined x 4, 2, 3, undefined x 1]
+[1, 2, 3, ,,,,,,,].copyWithin(-6, -8)
+// <- [1, 2, 3, undefined x 1, 3, undefined x 5]
+copyWithin([1, 2, 3, ,,,,,,,], -6, -8)
+// <- [1, 2, 3, undefined x 1, 3, undefined x 5]
+[1, 2, 3, ,,,,,,,].copyWithin(-3, 1, 2)
+// <- [1, 2, 3, undefined x 4, 2, undefined x 2]
+copyWithin([1, 2, 3, ,,,,,,,], -3, 1, 2)
+// <- [1, 2, 3, undefined x 4, 2, undefined x 2]
+```
