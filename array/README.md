@@ -197,3 +197,10 @@ Array.from( { length: 4 } ,v=>v=1) // [1, 1, 1, 1]
 
 ### copyWithin
 
+> 数组实例的copyWithin()方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。
+ 
+```javascript
+Array.prototype.copyWithin(target, start = 0, end = this.length)
+```
+
+
