@@ -203,4 +203,22 @@ Array.from( { length: 4 } ,v=>v=1) // [1, 1, 1, 1]
 Array.prototype.copyWithin(target, start = 0, end = this.length)
 ```
 
+示例1：
+```javascript
+var items = [1, 2, 3, ,,,,,,,]
+items.copyWithin(6, 0, 3) //  [1, 2, 3, empty × 3, 1, 2, 3, empty]
+```
+
+示例2：
+```javascript
+var items = [1, 2, 3, ,,,,,,,]
+items.copyWithin(6, 1, 3) // [1, 2, 3, empty × 3, 2, 3, empty × 2]
+```
+
+示例3：
+```javascript
+var items = [1, 2, 3, ,,,,,,,]
+items.copyWithin(6, 2, 3) // [1, 2, 3, empty × 3, 3, empty × 3]
+```
+
 
