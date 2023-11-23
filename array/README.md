@@ -278,3 +278,23 @@ console.log(arr2)
 find(callbackFn)
 find(callbackFn, thisArg)
 ```
+示例：
+```javascript
+let arr1 = [1, 2, 3, 4, 5].find(item => item > 2)
+// <- 3
+let arr2 = [1, 2, 3, 4, 5].find((item, i) => i === 3)
+// <- 4
+let arr3 = [1, 2, 3, 4, 5].find(item => item === Infinity)
+// <- undefined
+console.log(arr1,arr2,arr3)
+```
+非数组种使用：
+```javascript
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x))); // 7.3
+```
