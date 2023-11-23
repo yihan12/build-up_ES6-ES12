@@ -230,3 +230,13 @@ items.copyWithin(6, 2, 3) // [1, 2, 3, empty × 3, 3, empty × 3]
 [1, 2, 3, ,,,,,,,].copyWithin(-3, 1, 2)
 // <- [1, 2, 3, undefined x 4, 2, undefined x 2]
 ```
+
+### fill
+```javascript
+console.log(['a', 'b', 'c'].fill(0)) // [0, 0, 0]
+console.log(new Array(3).fill(0)) // [0, 0, 0]
+console.log(['a', 'b', 'c',,,].fill(0, 2)) // ['a', 'b', 0, 0, 0]
+console.log(new Array(5).fill(0, 0, 3)) // [0, 0, 0, empty × 2]
+console.log(new Array(3).fill({})) // [{}, {}, {}]
+console.log(new Array(3).fill(function foo () {})) // [function foo () {}, function foo () {}, function foo () {}]
+```
