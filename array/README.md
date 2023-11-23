@@ -243,7 +243,7 @@ console.log(new Array(5).fill(0, 0, 3)) // [0, 0, 0, empty × 2]
 console.log(new Array(3).fill({})) // [{}, {}, {}]
 console.log(new Array(3).fill(function foo () {})) // [function foo () {}, function foo () {}, function foo () {}]
 ```
-**语法：**
+语法：
 ```
 fill(value)
 fill(value, start)
@@ -272,7 +272,7 @@ console.log(arr2)
 > 如果需要查找数组中是否存在某个值，请使用 Array.prototype.includes()。同样，它检查每个元素是否与值相等，而不是使用测试函数。  
 > 如果需要查找是否有元素满足所提供的测试函数，请使用 Array.prototype.some()。
 
-**语法：**
+语法：
 
 ```javascript
 find(callbackFn)
