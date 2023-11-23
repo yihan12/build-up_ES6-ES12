@@ -263,3 +263,18 @@ console.log(arr2)
 // [[5], [5], [5]]
 ```
 
+### find
+
+> find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+> 
+> 如果需要在数组中找到对应元素的索引，请使用 findIndex()。  
+> 如果需要查找某个值的索引，请使用 Array.prototype.indexOf()。（它类似于 findIndex()，但只是检查每个元素是否与值相等，而不是使用测试函数。）  
+> 如果需要查找数组中是否存在某个值，请使用 Array.prototype.includes()。同样，它检查每个元素是否与值相等，而不是使用测试函数。  
+> 如果需要查找是否有元素满足所提供的测试函数，请使用 Array.prototype.some()。
+
+#### 语法
+
+```javascript
+find(callbackFn)
+find(callbackFn, thisArg)
+```
