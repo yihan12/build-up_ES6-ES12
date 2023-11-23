@@ -232,6 +232,9 @@ items.copyWithin(6, 2, 3) // [1, 2, 3, empty × 3, 3, empty × 3]
 ```
 
 ### fill
+
+> fill() 方法用一个固定值填充一个数组中从起始索引（默认为 0）到终止索引（默认为 array.length）内的全部元素。它返回修改后的数组。
+
 ```javascript
 console.log(['a', 'b', 'c'].fill(0)) // [0, 0, 0]
 console.log(new Array(3).fill(0)) // [0, 0, 0]
@@ -240,3 +243,11 @@ console.log(new Array(5).fill(0, 0, 3)) // [0, 0, 0, empty × 2]
 console.log(new Array(3).fill({})) // [{}, {}, {}]
 console.log(new Array(3).fill(function foo () {})) // [function foo () {}, function foo () {}, function foo () {}]
 ```
+#### 语法
+```
+fill(value)
+fill(value, start)
+fill(value, start, end)
+```
+
+
