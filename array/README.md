@@ -250,4 +250,16 @@ fill(value, start)
 fill(value, start, end)
 ```
 
+注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。
+```javascript
+let arr1 = new Array(3).fill({name: "Mike"});
+arr1[0].name = "Ben";
+console.log(arr1)
+// [{name: "Ben"}, {name: "Ben"}, {name: "Ben"}]
+
+let arr2 = new Array(3).fill([]);
+arr2[0].push(5);
+console.log(arr2)
+// [[5], [5], [5]]
+```
 
