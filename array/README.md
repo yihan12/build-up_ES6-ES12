@@ -318,3 +318,6 @@ console.log(
   Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
 ); // 1
 ```
+
+# 迭代器协议相关方法
+
