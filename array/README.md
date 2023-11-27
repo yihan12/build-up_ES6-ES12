@@ -347,9 +347,7 @@ for (const key of iteratorV) {
 // 'b'
 // 'c'
 
-const a = ["a", "b", "c"];
-
-for (const [index, element] of a.entries()) {
+for (const [index, element] of array1.entries()) {
   console.log(index, element);
 }
 
