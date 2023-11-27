@@ -321,3 +321,39 @@ console.log(
 
 # 迭代器协议相关方法
 
+> keys：keys() 方法返回一个新的数组迭代器 (en-US)对象，其中包含数组中每个索引的键。  
+> values：values() 方法返回一个新的数组迭代器 (en-US)对象，该对象迭代数组中每个元素的值。  
+> entries：entries() 方法返回一个新的数组迭代器 (en-US)对象，该对象包含数组中每个索引的键/值对。
+
+```javascript
+
+const array1 = ['a', 'b', 'c'];
+const iteratorK = array1.keys();
+const iteratorV = array1.values();
+
+for (const key of iteratorK) {
+  console.log(key);
+}
+
+// 0
+// 1
+// 2
+
+for (const key of iteratorV) {
+  console.log(key);
+}
+
+// 'a'
+// 'b'
+// 'c'
+
+const a = ["a", "b", "c"];
+
+for (const [index, element] of a.entries()) {
+  console.log(index, element);
+}
+
+// 0 'a'
+// 1 'b'
+// 2 'c'
+```
