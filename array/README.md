@@ -298,3 +298,23 @@ const arrayLike = {
 };
 console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x))); // 7.3
 ```
+
+### findIndex
+
+> findIndex() 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
+
+```javascript
+console.log([1, 5, 10, 15].findIndex(function(value, index, arr) {
+  return value > 9;
+})) // 2
+console.log([1, , 3].findIndex((x) => x === undefined)); // 1
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+); // 1
+```
