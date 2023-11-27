@@ -324,6 +324,7 @@ console.log(
 > keys：keys() 方法返回一个新的数组迭代器 (en-US)对象，其中包含数组中每个索引的键。  
 > values：values() 方法返回一个新的数组迭代器 (en-US)对象，该对象迭代数组中每个元素的值。  
 > entries：entries() 方法返回一个新的数组迭代器 (en-US)对象，该对象包含数组中每个索引的键/值对。
+> [Symbol.iterator]：Array 实例的 [@@iterator]() 方法实现了迭代协议，允许数组被大多数期望可迭代对象的语法所使用，例如展开语法和 for...of 循环。它返回一个数组迭代器对象 (en-US)，该对象会产生数组中每个索引的值。  
 
 ```javascript
 
@@ -354,4 +355,13 @@ for (const [index, element] of array1.entries()) {
 // 0 'a'
 // 1 'b'
 // 2 'c'
+
+const iteratorI = array1[Symbol.iterator]();
+for (const value of iteratorI) {
+  console.log(value);
+}
+
+// 'a'
+// 'b'
+// 'c'
 ```
