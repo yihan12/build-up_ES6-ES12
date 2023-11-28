@@ -23,6 +23,37 @@ console.log([1,2,3].includes(2,4)); // false
 
 > flat() 方法创建一个新的数组，并根据指定深度递归地将所有子数组元素拼接到新的数组中。
 
+### 语法
+
+```javascript
+flat()
+flat(depth)
+```
+depth 可选
+指定要提取嵌套数组的结构深度，默认值为 1。
+
+### 案例
+
+```javascript
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
+
+console.log(arr2.flat());
+// [0, 1, 2, [3, [4, 5]]]
+
+console.log(arr2.flat(2));
+// [0, 1, 2, 3, [4, 5]]
+
+console.log(arr2.flat(Infinity));
+// [0, 1, 2, 3, 4, 5]
+console.log(arr2.flat(3));
+// [0, 1, 2, 3, 4, 5]
+```
+
 # flatMap
 
 > flatMap() 方法对数组中的每个元素应用给定的回调函数，然后将结果展开一级，返回一个新数组。它等价于在调用 map() 方法后再调用深度为 1 的 flat() 方法（arr.map(...args).flat()），但比分别调用这两个方法稍微更高效一些。
