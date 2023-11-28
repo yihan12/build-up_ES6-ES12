@@ -57,3 +57,17 @@ console.log(arr2.flat(3));
 # flatMap
 
 > flatMap() 方法对数组中的每个元素应用给定的回调函数，然后将结果展开一级，返回一个新数组。它等价于在调用 map() 方法后再调用深度为 1 的 flat() 方法（arr.map(...args).flat()），但比分别调用这两个方法稍微更高效一些。
+
+```javascript
+const arr1 = [1, 2, 1];
+let result1 = arr1.flatMap((num) => num*2);
+console.log(arr1, result1); // [1, 2, 1] [2, 4, 2]
+
+const arr2 = [1, 2, 1];
+let result2 = arr2.flatMap((num) =>[num*2]);
+console.log(arr2, result2); // [1, 2, 1] [2, 4, 2]
+
+const arr3 = [1, 2, 1];
+let result3 = arr2.flatMap((num) =>[[num*2]]);
+console.log(arr3, result3); // [1, 2, 1] [[2], [4], [2]]
+```
