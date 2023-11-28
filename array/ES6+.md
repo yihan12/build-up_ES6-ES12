@@ -18,3 +18,11 @@ console.log([1,2,3].includes(2,2)); // false
 console.log([1,2,3].includes(2,3)); // false
 console.log([1,2,3].includes(2,4)); // false
 ```
+
+# flat
+
+> flat() 方法创建一个新的数组，并根据指定深度递归地将所有子数组元素拼接到新的数组中。
+
+# flatMap
+
+> flatMap() 方法对数组中的每个元素应用给定的回调函数，然后将结果展开一级，返回一个新数组。它等价于在调用 map() 方法后再调用深度为 1 的 flat() 方法（arr.map(...args).flat()），但比分别调用这两个方法稍微更高效一些。
