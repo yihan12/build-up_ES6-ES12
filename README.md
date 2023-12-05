@@ -111,7 +111,12 @@ ES6（ECMAScript 6）是JavaScript的一种新的标准，也被称为JavaScript
 
 * **[第五章 函数的扩展](https://github.com/yihan12/build-up_ES6-ES12/blob/main/array/README.md)**
   * [箭头函数](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/arrow%20function.md)
-  * [Rest参数](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
+  * [函数参数](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
+    * [参数默认值](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
+    * [与解构赋值结合](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
+    * [length的属性](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
+    * [作用域](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
+    * [函数的name属性](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/rest.md)
 
 * **[第六章 对象的扩展]()**
 
