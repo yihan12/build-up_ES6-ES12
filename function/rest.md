@@ -23,3 +23,12 @@ function add(...values) {
 
 add(2, 5, 3) // 10
 ```
+
+# 默认值
+
+```javascript
+function foo(x,y,z=3){
+  console.log(x,y,z)
+}
+foo(1,2)
+```
