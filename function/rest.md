@@ -24,7 +24,9 @@ function add(...values) {
 add(2, 5, 3) // 10
 ```
 
-# 默认值
+# 函数默认值
+
+> 函数默认值一般放到参数的最后
 
 ```javascript
 function foo(x,y,z=3){
