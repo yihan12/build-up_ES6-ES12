@@ -34,3 +34,6 @@ function foo(x,y,z=3){
 }
 foo(1,2)
 ```
+# 与解构赋值结合
+
+# length属性
