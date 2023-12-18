@@ -16,3 +16,35 @@
 > Map 是一个带键的数据项的集合，就像一个 Object 一样。 但是它们最大的差别是 Map 允许任何类型的键（key）。
 
 
+### 性能对比
+让我们看看Object和Map的寻找对应属性的属性的速度。
+
+```javascript
+let obj = {}, map = new Map();
+let users = ["John", "Murray", "Jane", "Jane", "Anne", "John", "Murray", "Jane", "Jane", "Anne"];
+
+for (let i = 0; i < users.length; i++) {
+  obj[i] = i;
+  map.set(i, i);
+}
+
+let result;
+
+console.time('Object'); 
+result = obj.hasOwnProperty("Anne"); 
+console.timeEnd('Object');
+
+console.time('Map'); 
+result = map.has("Anne"); 
+console.timeEnd('Map');
+
+// Object: 0.007080078125 ms
+// Map: 0.0029296875 ms
+```
+这两个集合的性能如下。
+```javascript
+Object: 0.007080078125 ms
+Map: 0.0029296875 ms
+```
+
+正如您所见，Map数据结构更灵活、更易于迭代并且性能更高。
