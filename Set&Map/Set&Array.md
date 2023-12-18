@@ -10,3 +10,36 @@
 - `set.has(value)` —— 如果 value 在 set 中，返回 true，否则返回 false。
 - `set.clear()` —— 清空 set。
 - `set.size` —— 返回元素个数。
+
+
+# Set和Array的区别
+
+```javascript
+let arr = [], set = new Set();
+let users = ["John", "Murray", "Jane", "Jane", "Anne", "John", "Murray", "Jane", "Jane", "Anne"];
+
+for (let i = 0; i < users.length; i++) {
+  arr.push(users[i]);
+  set.add(users[i]);
+}
+
+let result;
+
+console.time('Array'); 
+result = arr.indexOf("Anne") !== -1; 
+console.timeEnd('Array');
+
+console.time('Set'); 
+result = set.has("Anne"); 
+console.timeEnd('Set');
+
+// Array: 0.0029296875 ms
+// Set: 0.0009765625 ms
+```
+
+直接在您的控制台中运行此代码。结果如下：
+```javascript
+Array: 0.0029296875 ms
+Set: 0.0009765625 ms
+```
+这里差别很小，但是Set更快，如果你对大数据集进行这样的操作，后面的Set是更好的选择。
