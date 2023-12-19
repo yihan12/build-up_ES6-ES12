@@ -74,3 +74,8 @@ obj = null;
 ```
 
 # WeakSet
+WeakSet 的表现类似：
+
+- 与 Set 类似，但是我们只能向 WeakSet 添加对象（而不能是原始值）。
+- 对象只有在其它某个（些）地方能被访问的时候，才能留在 WeakSet 中。
+- 跟 Set 一样，WeakSet 支持 add，has 和 delete 方法，但不支持 size 和 keys()，并且不可迭代。
