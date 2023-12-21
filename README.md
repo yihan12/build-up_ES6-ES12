@@ -124,6 +124,12 @@ ES6（ECMAScript 6）是JavaScript的一种新的标准，也被称为JavaScript
 * **[第七章 Symbol]()**
 
 * **[第八章 Set、Map、WeakMap和WeakSet]()**
+  * [Set&Map]()
+    * [Map&Object]()
+    * [Set&Array]()
+  * [WeakMap&WeakSet]()
+    * [垃圾回收]()
+ 
 
 
 - [x] [第四章 数值新特性](https://github.com/yihan12/build-up_ES6/blob/main/%E7%AC%AC%E5%9B%9B%E7%AB%A0/%E6%95%B0%E5%80%BC.md)  
