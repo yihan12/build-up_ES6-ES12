@@ -119,7 +119,7 @@ ES6（ECMAScript 6）是JavaScript的一种新的标准，也被称为JavaScript
   * [箭头函数](https://github.com/yihan12/build-up_ES6-ES12/blob/main/function/arrow%20function.md)
 
 
-* **[第六章 对象的扩展]()**
+* **[第六章 对象的扩展](https://github.com/yihan12/build-up_ES6-ES12/blob/main/object/README.md)**
 
 * **[第七章 Symbol]()**
 
